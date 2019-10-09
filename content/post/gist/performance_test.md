@@ -7,7 +7,7 @@ tags = ["c"]
 image = ""
 banner = ""
 comments = true     # set false to hide Disqus comments
-share = true     e to share buttons
+share = true        # e to share buttons
 menu = ""           # set "main" to add this content to the main menu
 +++
 
