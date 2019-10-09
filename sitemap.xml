@@ -1,0 +1,59 @@
+<?xml-stylesheet type="text/xsl" href="https://onenote.bytectl.com/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://onenote.bytectl.com/post/calico/</loc>
+    <lastmod>2019-07-11T10:54:24+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://onenote.bytectl.com/post/test/</loc>
+    <lastmod>2019-07-11T10:54:24+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://onenote.bytectl.com/tags/network/</loc>
+    <lastmod>2019-07-11T10:54:24+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://onenote.bytectl.com/</loc>
+    <lastmod>2019-07-11T10:54:24+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://onenote.bytectl.com/post/</loc>
+    <lastmod>2019-07-11T10:54:24+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://onenote.bytectl.com/tags/software/</loc>
+    <lastmod>2019-07-11T10:54:24+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://onenote.bytectl.com/tags/</loc>
+    <lastmod>2019-07-11T10:54:24+02:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://onenote.bytectl.com/categories/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+</urlset>

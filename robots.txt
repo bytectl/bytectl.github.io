@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://onenote.bytectl.com/sitemap.xml
