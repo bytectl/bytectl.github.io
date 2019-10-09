@@ -141,6 +141,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     repo = "bytectl.github.io"               # The repo to store comments
     clientId = "6cf717a543ff66baf5be"           # Your client ID
     clientSecret = "763d3689b48ea3006fe48ef2832c22fa5345037d"       # Your client secret
+    labels = ['Gitalk']
     
   [params.flowchartDiagrams]# see https://blog.olowolo.com/example-site/post/js-flowchart-diagrams/
     enable = false
@@ -189,4 +190,3 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 #  section = ["HTML", "RSS"]
 #  taxonomy = ["HTML", "RSS"]
 #  taxonomyTerm = ["HTML"]
-
