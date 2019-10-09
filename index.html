@@ -118,47 +118,6 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/calico/">calico 网络原理</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-07-11 </span>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <h1 id="calico-网络原理">calico 网络原理</h1>
-
-<h3 id="node节点-装网络之前路由">node节点 装网络之前路由</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">[root@iZj6c3cqwumhn5jov661z7Z ~]# route -n
-Kernel IP routing table
-Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
-0.0.0.0         172.31.255.253  0.0.0.0         UG    0      0        0 eth0
-169.254.0.0     0.0.0.0         255.255.0.0     U     1002   0        0 eth0
-172.17.0.0      0.0.0.0         255.255.0.0     U     0      0        0 docker0
-172.31.240.0    0.0.0.0         255.255.240.0   U     0      0        0 eth0</pre></td></tr></table>
-</div>
-</div>
-    </div>
-    <div class="read-more">
-      <a href="/post/calico/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/test/">my first post</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2019-07-11 </span>
@@ -172,6 +131,25 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
     </div>
     <div class="read-more">
       <a href="/post/test/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/gist/performance_test/">性能测试</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-07-11 </span>
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      性能测试工具 生成测试 编译 和链接时,添加参数 -pg 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 // 服务程序,添加如下代码: static void sighandler( int sig_no ) { exit(0); } int main(int argc, char* argv[]) { // 接收信号
+    </div>
+    <div class="read-more">
+      <a href="/post/gist/performance_test/" class="read-more-link">阅读更多</a>
     </div>
   </div>
 </article>
