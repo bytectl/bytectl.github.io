@@ -5,11 +5,11 @@ date: 2019-10-10T09:23:18+08:00
 draft: false
 tags: [""]
 categories:  [""]
-image = ""
-banner = ""
-comments = true     # set false to hide Disqus comments
-share = true        # set false to share buttons
-menu = ""           # set "main" to add this content to the main menu
+image: ""
+banner: ""
+comments: true     # set false to hide Disqus comments
+share: true        # set false to share buttons
+menu: ""           # set "main" to add this content to the main menu
 ---
 
 # hugo
