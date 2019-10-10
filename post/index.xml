@@ -6,15 +6,24 @@
     <description>Recent content in Posts on onenote</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Jul 2019 10:54:24 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 10 Oct 2019 09:23:18 +0800</lastBuildDate>
     
 	<atom:link href="https://onenote.bytectl.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Hugo</title>
+      <link>https://onenote.bytectl.com/post/hugo/</link>
+      <pubDate>Thu, 10 Oct 2019 09:23:18 +0800</pubDate>
+      
+      <guid>https://onenote.bytectl.com/post/hugo/</guid>
+      <description>hugo 安装 1 2 3 4 5 export GOPROXY=https://goproxy.cn export GO111MODULE=on go install -v github.com/gohugoio/hugo hugo version 建立site 1 hugo new site bytectl</description>
+    </item>
+    
+    <item>
       <title>my first post</title>
       <link>https://onenote.bytectl.com/post/test/</link>
-      <pubDate>Thu, 11 Jul 2019 10:54:24 +0200</pubDate>
+      <pubDate>Wed, 09 Oct 2019 10:54:24 +0201</pubDate>
       
       <guid>https://onenote.bytectl.com/post/test/</guid>
       <description>原理 top1 1 curl www.baidu.com top2 1 curl www.baidu.com top3 1 curl www.baidu.com</description>
@@ -23,7 +32,7 @@
     <item>
       <title>性能测试</title>
       <link>https://onenote.bytectl.com/post/gist/performance_test/</link>
-      <pubDate>Thu, 11 Jul 2019 10:54:24 +0200</pubDate>
+      <pubDate>Wed, 11 Sep 2019 10:54:24 +0200</pubDate>
       
       <guid>https://onenote.bytectl.com/post/gist/performance_test/</guid>
       <description>性能测试工具 生成测试 编译 和链接时,添加参数 -pg 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 // 服务程序,添加如下代码: static void sighandler( int sig_no ) { exit(0); } int main(int argc, char* argv[]) { // 接收信号</description>

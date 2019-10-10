@@ -6,7 +6,7 @@
     <description>Recent content in c on onenote</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Jul 2019 10:54:24 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 11 Sep 2019 10:54:24 +0200</lastBuildDate>
     
 	<atom:link href="https://onenote.bytectl.com/tags/c/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>性能测试</title>
       <link>https://onenote.bytectl.com/post/gist/performance_test/</link>
-      <pubDate>Thu, 11 Jul 2019 10:54:24 +0200</pubDate>
+      <pubDate>Wed, 11 Sep 2019 10:54:24 +0200</pubDate>
       
       <guid>https://onenote.bytectl.com/post/gist/performance_test/</guid>
       <description>性能测试工具 生成测试 编译 和链接时,添加参数 -pg 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 // 服务程序,添加如下代码: static void sighandler( int sig_no ) { exit(0); } int main(int argc, char* argv[]) { // 接收信号</description>

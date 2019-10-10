@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>my first post - onenote</title>
+  <title>Hugo - onenote</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="wuxingzhong" /><meta name="description" content="原理 top1 1 curl www.baidu.com top2 1 curl www.baidu.com top3 1 curl www.baidu.com" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="wuxingzhong" /><meta name="description" content="hugo 安装 1 2 3 4 5 export GOPROXY=https://goproxy.cn export GO111MODULE=on go install -v github.com/gohugoio/hugo hugo version 建立site 1 hugo new site bytectl" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.58.3 with theme even" />
 
 
-<link rel="canonical" href="https://onenote.bytectl.com/post/test/" />
+<link rel="canonical" href="https://onenote.bytectl.com/post/hugo/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -38,26 +38,26 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="my first post" />
-<meta property="og:description" content="原理 top1 1 curl www.baidu.com top2 1 curl www.baidu.com top3 1 curl www.baidu.com" />
+<meta property="og:title" content="Hugo" />
+<meta property="og:description" content="hugo 安装 1 2 3 4 5 export GOPROXY=https://goproxy.cn export GO111MODULE=on go install -v github.com/gohugoio/hugo hugo version 建立site 1 hugo new site bytectl" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://onenote.bytectl.com/post/test/" />
-<meta property="article:published_time" content="2019-10-09T10:54:24+02:01" />
-<meta property="article:modified_time" content="2019-10-09T10:54:24+02:01" />
-<meta itemprop="name" content="my first post">
-<meta itemprop="description" content="原理 top1 1 curl www.baidu.com top2 1 curl www.baidu.com top3 1 curl www.baidu.com">
+<meta property="og:url" content="https://onenote.bytectl.com/post/hugo/" />
+<meta property="article:published_time" content="2019-10-10T09:23:18+08:00" />
+<meta property="article:modified_time" content="2019-10-10T09:23:18+08:00" />
+<meta itemprop="name" content="Hugo">
+<meta itemprop="description" content="hugo 安装 1 2 3 4 5 export GOPROXY=https://goproxy.cn export GO111MODULE=on go install -v github.com/gohugoio/hugo hugo version 建立site 1 hugo new site bytectl">
 
 
-<meta itemprop="datePublished" content="2019-10-09T10:54:24&#43;02:01" />
-<meta itemprop="dateModified" content="2019-10-09T10:54:24&#43;02:01" />
-<meta itemprop="wordCount" content="14">
+<meta itemprop="datePublished" content="2019-10-10T09:23:18&#43;08:00" />
+<meta itemprop="dateModified" content="2019-10-10T09:23:18&#43;08:00" />
+<meta itemprop="wordCount" content="29">
 
 
 
-<meta itemprop="keywords" content="software," />
+<meta itemprop="keywords" content="," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="my first post"/>
-<meta name="twitter:description" content="原理 top1 1 curl www.baidu.com top2 1 curl www.baidu.com top3 1 curl www.baidu.com"/>
+<meta name="twitter:title" content="Hugo"/>
+<meta name="twitter:description" content="hugo 安装 1 2 3 4 5 export GOPROXY=https://goproxy.cn export GO111MODULE=on go install -v github.com/gohugoio/hugo hugo version 建立site 1 hugo new site bytectl"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -124,11 +124,13 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">my first post</h1>
+      <h1 class="post-title">Hugo</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2019-10-09 </span>
-        
+        <span class="post-time"> 2019-10-10 </span>
+        <div class="post-category">
+            <a href="/categories//">  </a>
+            </div>
         
       </div>
     </header>
@@ -138,13 +140,10 @@
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#原理">原理</a>
+<li><a href="#hugo">hugo</a>
 <ul>
-<li><a href="#top1">top1</a></li>
-<li><a href="#top2">top2</a>
-<ul>
-<li><a href="#top3">top3</a></li>
-</ul></li>
+<li><a href="#安装">安装</a></li>
+<li><a href="#建立site">建立site</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -153,33 +152,32 @@
     <div class="post-content">
       
 
-<h1 id="原理">原理</h1>
+<h1 id="hugo">hugo</h1>
 
-<h2 id="top1">top1</h2>
+<h2 id="安装">安装</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">export</span> <span class="nv">GOPROXY</span><span class="o">=</span>https://goproxy.cn
+<span class="nb">export</span> <span class="nv">GO111MODULE</span><span class="o">=</span>on
+
+go install -v github.com/gohugoio/hugo
+hugo version</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="建立site">建立site</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">curl www.baidu.com</code></pre></td></tr></table>
-</div>
-</div>
-<h2 id="top2">top2</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">curl www.baidu.com</code></pre></td></tr></table>
-</div>
-</div>
-<h3 id="top3">top3</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">curl www.baidu.com</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">hugo new site bytectl</code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -192,7 +190,7 @@
   <p class="copyright-item">
     <span class="item-title">上次更新</span>
     <span class="item-content">
-        2019-10-09
+        2019-10-10
         
     </span>
   </p>
@@ -201,16 +199,12 @@
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/software/">software</a>
+          <a href="/tags//"></a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/post/hugo/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Hugo</span>
-            <span class="prev-text nav-mobile">上一篇</span>
-          </a>
-        <a class="next" href="/post/gist/performance_test/">
-            <span class="next-text nav-default">性能测试</span>
+        
+        <a class="next" href="/post/test/">
+            <span class="next-text nav-default">my first post</span>
             <span class="next-text nav-mobile">下一篇</span>
             <i class="iconfont icon-right"></i>
           </a>
@@ -223,8 +217,8 @@
     <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript">
       var gitalk = new Gitalk({
-        id: '2019-10-09 10:54:24 \x2b0201 \x2b0201',
-        title: 'my first post',
+        id: '2019-10-10 09:23:18 \x2b0800 DST',
+        title: 'Hugo',
         clientID: '3f8b4d8df7c9924dd7ef',
         clientSecret: 'a769028997d4dec3bc9e64372eee463dfbd4cbba',
         repo: 'gitalk-bytectl',
