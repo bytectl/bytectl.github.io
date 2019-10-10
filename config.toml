@@ -137,12 +137,11 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
     clientSecret = ""       # Your client secret
 
   [params.gitalk]           # Gitalk is a comment system based on GitHub issues. see https://github.com/gitalk/gitalk
-    owner = "bytectl"              # Your GitHub ID
-    repo = "bytectl.github.io"               # The repo to store comments
-    clientId = "6cf717a543ff66baf5be"           # Your client ID
-    clientSecret = "763d3689b48ea3006fe48ef2832c22fa5345037d"       # Your client secret
-    labels = ['Gitalk']
-    
+    owner = "wuxingzhong"              # Your GitHub ID
+    repo = "gitalk-bytectl"               # The repo to store comments
+    clientId = "3f8b4d8df7c9924dd7ef"           # Your client ID
+    clientSecret = "a769028997d4dec3bc9e64372eee463dfbd4cbba"       # Your client secret
+
   [params.flowchartDiagrams]# see https://blog.olowolo.com/example-site/post/js-flowchart-diagrams/
     enable = false
     options = ""
@@ -190,3 +189,4 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 #  section = ["HTML", "RSS"]
 #  taxonomy = ["HTML", "RSS"]
 #  taxonomyTerm = ["HTML"]
+
