@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on onenote</title>
+    <link>https://onenote.bytectl.com/tags/linux/</link>
+    <description>Recent content in linux on onenote</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 10 Oct 2019 19:24:53 +0800</lastBuildDate>
+    
+	<atom:link href="https://onenote.bytectl.com/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Iptable</title>
+      <link>https://onenote.bytectl.com/post/software/iptable/</link>
+      <pubDate>Thu, 10 Oct 2019 19:24:53 +0800</pubDate>
+      
+      <guid>https://onenote.bytectl.com/post/software/iptable/</guid>
+      <description>iptable 限流 1 2 3 4 5 iptables -A INPUT -p tcp –dport 8883 -m limit --limit 100/sec --limit-burst 1000 -j ACCEPT -m limit --limit 100/sec 限制每秒连接请求数 –limit-burst：触发阀值，一次涌入数据包数量 连接</description>
+    </item>
+    
+  </channel>
+</rss>

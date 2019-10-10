@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>software on onenote</title>
-    <link>https://onenote.bytectl.com/tags/software/</link>
+    <link>https://onenote.bytectl.com/categories/software/</link>
     <description>Recent content in software on onenote</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 10 Oct 2019 19:24:53 +0800</lastBuildDate>
     
-	<atom:link href="https://onenote.bytectl.com/tags/software/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://onenote.bytectl.com/categories/software/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -36,15 +36,6 @@
       
       <guid>https://onenote.bytectl.com/post/software/gitbook/</guid>
       <description>安装 1 npm install gitbook-cli -g 安装calibre 参考 1 wget -nv -O- https://download.calibre-ebook.com/linux-installer.py | sudo python -c &amp;#34;import sys; main=lambda:sys.stderr.write(&amp;#39;Download failed\n&amp;#39;); exec(sys.stdin.read()); main()&amp;#34; 使用 1 2 3 4 5 6 # 创建书籍 gitbook init # 启动预览 gitbook serve # 本地编译 gitbook build 生成 1 2 3 4 5 6</description>
-    </item>
-    
-    <item>
-      <title>my first post</title>
-      <link>https://onenote.bytectl.com/post/test/</link>
-      <pubDate>Wed, 09 Oct 2019 10:54:24 +0201</pubDate>
-      
-      <guid>https://onenote.bytectl.com/post/test/</guid>
-      <description>原理 top1 1 curl www.baidu.com top2 1 curl www.baidu.com top3 1 curl www.baidu.com</description>
     </item>
     
   </channel>

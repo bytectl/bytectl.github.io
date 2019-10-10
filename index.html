@@ -45,7 +45,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://onenote.bytectl.com/" />
 
-<meta property="og:updated_time" content="2019-10-10T09:23:18+08:00" />
+<meta property="og:updated_time" content="2019-10-10T19:24:53+08:00" />
 <meta itemprop="name" content="onenote">
 <meta itemprop="description" content="Hugo onenote">
 
@@ -118,6 +118,69 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/software/iptable/">Iptable</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-10-10 </span>
+      <div class="post-category">
+          <a href="/categories/software/"> software </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      iptable 限流 1 2 3 4 5 iptables -A INPUT -p tcp –dport 8883 -m limit --limit 100/sec --limit-burst 1000 -j ACCEPT -m limit --limit 100/sec 限制每秒连接请求数 –limit-burst：触发阀值，一次涌入数据包数量 连接
+    </div>
+    <div class="read-more">
+      <a href="/post/software/iptable/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/software/httpd-tools/">Httpd Tools</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-10-10 </span>
+      <div class="post-category">
+          <a href="/categories/software/"> software </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+       httpd-tools install 1  yum install httpd-tools   ab 1  ab -n 1000 -c 100 10.108.167.100:9040/info  
+    </div>
+    <div class="read-more">
+      <a href="/post/software/httpd-tools/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/software/gitbook/">Gitbook</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-10-10 </span>
+      <div class="post-category">
+          <a href="/categories/software/"> software </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      安装 1 npm install gitbook-cli -g 安装calibre 参考 1 wget -nv -O- https://download.calibre-ebook.com/linux-installer.py | sudo python -c &#34;import sys; main=lambda:sys.stderr.write(&#39;Download failed\n&#39;); exec(sys.stdin.read()); main()&#34; 使用 1 2 3 4 5 6 # 创建书籍 gitbook init # 启动预览 gitbook serve # 本地编译 gitbook build 生成 1 2 3 4 5 6
+    </div>
+    <div class="read-more">
+      <a href="/post/software/gitbook/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/hugo/">Hugo</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2019-10-10 </span>
@@ -156,30 +219,14 @@
   </div>
 </article>
 
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/gist/performance_test/">性能测试</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-09-11 </span>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      性能测试工具 生成测试 编译 和链接时,添加参数 -pg 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 // 服务程序,添加如下代码: static void sighandler( int sig_no ) { exit(0); } int main(int argc, char* argv[]) { // 接收信号
-    </div>
-    <div class="read-more">
-      <a href="/post/gist/performance_test/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
     </section>
   
   <nav class="pagination">
     
-    
+    <a class="next" href="/page/2/">
+        <span class="next-text">下一页</span>
+        <i class="iconfont icon-right"></i>
+      </a>
   </nav>
         </div>
         

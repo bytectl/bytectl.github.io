@@ -6,10 +6,37 @@
     <description>Recent content in Posts on onenote</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Oct 2019 09:23:18 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 10 Oct 2019 19:24:53 +0800</lastBuildDate>
     
 	<atom:link href="https://onenote.bytectl.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Iptable</title>
+      <link>https://onenote.bytectl.com/post/software/iptable/</link>
+      <pubDate>Thu, 10 Oct 2019 19:24:53 +0800</pubDate>
+      
+      <guid>https://onenote.bytectl.com/post/software/iptable/</guid>
+      <description>iptable 限流 1 2 3 4 5 iptables -A INPUT -p tcp –dport 8883 -m limit --limit 100/sec --limit-burst 1000 -j ACCEPT -m limit --limit 100/sec 限制每秒连接请求数 –limit-burst：触发阀值，一次涌入数据包数量 连接</description>
+    </item>
+    
+    <item>
+      <title>Httpd Tools</title>
+      <link>https://onenote.bytectl.com/post/software/httpd-tools/</link>
+      <pubDate>Thu, 10 Oct 2019 19:22:49 +0800</pubDate>
+      
+      <guid>https://onenote.bytectl.com/post/software/httpd-tools/</guid>
+      <description> httpd-tools install 1  yum install httpd-tools   ab 1  ab -n 1000 -c 100 10.108.167.100:9040/info  </description>
+    </item>
+    
+    <item>
+      <title>Gitbook</title>
+      <link>https://onenote.bytectl.com/post/software/gitbook/</link>
+      <pubDate>Thu, 10 Oct 2019 19:20:37 +0800</pubDate>
+      
+      <guid>https://onenote.bytectl.com/post/software/gitbook/</guid>
+      <description>安装 1 npm install gitbook-cli -g 安装calibre 参考 1 wget -nv -O- https://download.calibre-ebook.com/linux-installer.py | sudo python -c &amp;#34;import sys; main=lambda:sys.stderr.write(&amp;#39;Download failed\n&amp;#39;); exec(sys.stdin.read()); main()&amp;#34; 使用 1 2 3 4 5 6 # 创建书籍 gitbook init # 启动预览 gitbook serve # 本地编译 gitbook build 生成 1 2 3 4 5 6</description>
+    </item>
     
     <item>
       <title>Hugo</title>
