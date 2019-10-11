@@ -25,8 +25,44 @@ hugo version
 
 ```
 
-## 建立site
+## 简单使用流程
+
+### 建立site
 
 ```bash
 hugo new site bytectl
 ```
+
+### 配置主题
+
+```bash
+git clone https://github.com/xxx themes/xxx
+
+# 配置
+cp themes/xxx/exampleSite/config.yaml ./
+vim config.yaml
+```
+
+### 编写文章
+
+```bash
+hugo new post/hugo.md
+vim content/post/hugo.md
+
+```
+
+### 预览
+
+```bash
+hugo server -D
+```
+
+在浏览器中打开提示hugo提示的网址即可
+
+### 发布
+
+```bash
+hugo
+```
+
+将生成的文件拷贝到nginx等静态页面服务器中即可
