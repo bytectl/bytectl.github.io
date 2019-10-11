@@ -6,7 +6,7 @@ steps:
 - name: build
   image: golang
   commands:
-  - go install -v  github.com/gohugoio/hugo
+  - go get -v  github.com/gohugoio/hugo
   - chmod +x pull-theme.sh  && ./pull-theme.sh
   - hugo 
 - name: publish
