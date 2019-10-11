@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2019-10-11T16:57:19&#43;08:00" />
 <meta itemprop="dateModified" content="2019-10-11T16:57:19&#43;08:00" />
-<meta itemprop="wordCount" content="2311">
+<meta itemprop="wordCount" content="2295">
 
 
 
@@ -239,17 +239,58 @@ docker run -m 1GB --rm  openjdk:11-jre-slim java -XshowSettings:vm  -version
 docker run -m 1GB --rm  openjdk:12 java -XshowSettings:vm  -version</code></pre></td></tr></table>
 </div>
 </div>
-<p>结果:
-jdk版本     | 测试结果
-&mdash;&mdash;&mdash;&mdash;|&mdash;&mdash;&mdash;
-openjdk:8   | fail
-8 + 参数    | ok
-openjdk:9   | fail
-9 + 参数    | ok
-openjdk:9   | fail
-openjdk:10  | ok
-openjdk:11  | ok
-openjdk:12  | ok</p>
+<p>结果:</p>
+
+<table>
+<thead>
+<tr>
+<th>jdk版本</th>
+<th>测试结果</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>openjdk:8</td>
+<td>fail</td>
+</tr>
+
+<tr>
+<td>8 + 参数</td>
+<td>ok</td>
+</tr>
+
+<tr>
+<td>openjdk:9</td>
+<td>fail</td>
+</tr>
+
+<tr>
+<td>9 + 参数</td>
+<td>ok</td>
+</tr>
+
+<tr>
+<td>openjdk:9</td>
+<td>fail</td>
+</tr>
+
+<tr>
+<td>openjdk:10</td>
+<td>ok</td>
+</tr>
+
+<tr>
+<td>openjdk:11</td>
+<td>ok</td>
+</tr>
+
+<tr>
+<td>openjdk:12</td>
+<td>ok</td>
+</tr>
+</tbody>
+</table>
 
 <h3 id="测试用例2-ibmopenj9">测试用例2(IBMOPENJ9)</h3>
 <div class="highlight"><div class="chroma">
@@ -266,13 +307,38 @@ docker run -m 4GB --rm  adoptopenjdk/openjdk10-openj9:alpine-slim  java -XshowSe
 docker run -m 4GB --rm  adoptopenjdk/openjdk11-openj9:alpine-slim  java -XshowSettings:vm  -version</code></pre></td></tr></table>
 </div>
 </div>
-<p>结果:
-jdk版本           | 测试结果
-&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;|&mdash;&mdash;&mdash;
-openjdk8-openj9   | ok
-openjdk9-openj9   | ok
-openjdk10-openj9  | ok
-openjdk11-openj9  | ok</p>
+<p>结果:</p>
+
+<table>
+<thead>
+<tr>
+<th>jdk版本</th>
+<th>测试结果</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>openjdk8-openj9</td>
+<td>ok</td>
+</tr>
+
+<tr>
+<td>openjdk9-openj9</td>
+<td>ok</td>
+</tr>
+
+<tr>
+<td>openjdk10-openj9</td>
+<td>ok</td>
+</tr>
+
+<tr>
+<td>openjdk11-openj9</td>
+<td>ok</td>
+</tr>
+</tbody>
+</table>
 
 <h3 id="分析">分析</h3>
 
