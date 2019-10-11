@@ -26,7 +26,7 @@
       <pubDate>Thu, 10 Oct 2019 19:22:49 +0800</pubDate>
       
       <guid>https://onenote.bytectl.com/post/software/httpd-tools/</guid>
-      <description>httpd-tools install 1 yum install httpd-tools ab 1 2 # 压测短连接 ab -n 1000 -c 100 10.108.167.100:9040/info</description>
+      <description>install 1 yum install httpd-tools ab 1 2 # 压测短连接 ab -n 1000 -c 100 10.108.167.100:9040/info</description>
     </item>
     
     <item>
