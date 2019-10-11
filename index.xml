@@ -53,7 +53,7 @@
       <pubDate>Fri, 11 Oct 2019 17:10:46 +0800</pubDate>
       
       <guid>https://onenote.bytectl.com/post/gist/%E5%87%BD%E6%95%B0%E5%A4%87%E5%BF%98/</guid>
-      <description>获取key-value 1 strtok</description>
+      <description>获取key-value 1 strtok gist 将结构体映射到0地址,计算成员偏移量 1 (int)&amp;amp;(((TYPE*)0)-&amp;gt;MEMBER ) 将结构体映射到0地址,计算成员占用大小 1 sizeof(((TYPE*)0)-&amp;gt;MEMBER ) ) 符号转字符串 1 #define STR(s) #s 字符</description>
     </item>
     
     <item>
