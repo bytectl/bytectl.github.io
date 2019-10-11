@@ -4,14 +4,15 @@ name: hugo
 
 steps:
 - name: build
-  image: golang
+  image: dotopt/hugo
   commands:
-  - go get -v  github.com/gohugoio/hugo
   - git clone https://github.com/olOwOlo/hugo-theme-even themes/even
   - hugo 
 - name: publish
   image: plugins/gh-pages
   settings:
+    username: 
+      from_secret: github_username
     ssh_key:
       from_secret: github_ssh_key
     pages_directory: public/
