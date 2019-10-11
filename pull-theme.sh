@@ -1,3 +1,3 @@
 #!/bin/bash
 
-git clone https://github.com/olOwOlo/hugo-theme-even themes/even
+git clone https://github.com/bytectl/hugo-theme-even themes/even

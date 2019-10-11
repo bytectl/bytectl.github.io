@@ -6,7 +6,7 @@ steps:
 - name: build
   image: dotopt/hugo
   commands:
-  - git clone https://github.com/olOwOlo/hugo-theme-even themes/even
+  - git clone https://github.com/bytectl/hugo-theme-even themes/even
   - hugo 
 - name: publish
   image: plugins/gh-pages
