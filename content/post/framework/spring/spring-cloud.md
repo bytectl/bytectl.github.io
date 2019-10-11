@@ -3,8 +3,8 @@ author: "wuxingzhong"
 title: "Spring Cloud"
 date: 2019-10-11T17:01:53+08:00
 draft: false
-tags: [""]
-categories:  [""]
+tags: ["java", "spring"]
+categories:  ["java"]
 image: ""
 banner: ""
 comments: true     # set false to hide Disqus comments
