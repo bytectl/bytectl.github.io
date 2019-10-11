@@ -12,8 +12,6 @@ share: true        # set false to share buttons
 menu: ""           # set "main" to add this content to the main menu
 ---
 
-# httpd-tools
-
 ##  install
 ```bash
 yum install httpd-tools

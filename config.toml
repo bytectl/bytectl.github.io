@@ -5,6 +5,7 @@ defaultContentLanguage = "zh-cn"                             # en / zh-cn / ... 
 preserveTaxonomyNames = true
 enableRobotsTXT = true
 enableEmoji = true
+enableGitInfo = true
 theme = "even"
 
 # Syntax highlighting by Chroma. NOTE: Don't enable `highlightInClient` and `chroma` at the same time!
