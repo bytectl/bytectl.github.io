@@ -2,15 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://onenote.bytectl.com/post/gist/bm/</loc>
+    <lastmod>2019-10-11T17:34:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://onenote.bytectl.com/tags/c/</loc>
-    <lastmod>2019-10-11T17:24:28+08:00</lastmod>
+    <lastmod>2019-10-11T17:34:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://onenote.bytectl.com/categories/</loc>
+    <lastmod>2019-10-11T17:34:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://onenote.bytectl.com/</loc>
-    <lastmod>2019-10-11T17:24:28+08:00</lastmod>
+    <lastmod>2019-10-11T17:34:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://onenote.bytectl.com/post/</loc>
+    <lastmod>2019-10-11T17:34:09+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://onenote.bytectl.com/tags/</loc>
+    <lastmod>2019-10-11T17:34:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -23,42 +51,21 @@
   </url>
   
   <url>
-    <loc>https://onenote.bytectl.com/post/</loc>
-    <lastmod>2019-10-11T17:24:28+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://onenote.bytectl.com/tags/</loc>
-    <lastmod>2019-10-11T17:24:28+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://onenote.bytectl.com/tags/gist/</loc>
-    <lastmod>2019-10-11T17:24:28+08:00</lastmod>
+    <lastmod>2019-10-11T17:34:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://onenote.bytectl.com/post/gist/kmp/</loc>
-    <lastmod>2019-10-11T17:24:28+08:00</lastmod>
+    <lastmod>2019-10-11T17:34:09+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://onenote.bytectl.com/categories/c/</loc>
-    <lastmod>2019-10-11T17:17:36+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://onenote.bytectl.com/categories/</loc>
     <lastmod>2019-10-11T17:17:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
