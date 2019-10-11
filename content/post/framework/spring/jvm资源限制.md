@@ -65,16 +65,17 @@ docker run -m 1GB --rm  openjdk:12 java -XshowSettings:vm  -version
 ```
 
 结果:
-jdk版本     | 测试结果
-------------|---------
-openjdk:8   | fail
-8 + 参数    | ok
-openjdk:9   | fail
-9 + 参数    | ok
-openjdk:9   | fail
-openjdk:10  | ok
-openjdk:11  | ok
-openjdk:12  | ok
+
+|jdk版本     | 测试结果   |
+|------------|------------|
+|openjdk:8   | fail       |
+|8 + 参数    | ok         |
+|openjdk:9   | fail       |
+|9 + 参数    | ok         |
+|openjdk:9   | fail       |
+|openjdk:10  | ok         |
+|openjdk:11  | ok         |
+|openjdk:12  | ok         |
 
 ### 测试用例2(IBMOPENJ9)
 
@@ -86,14 +87,16 @@ docker run -m 4GB --rm  adoptopenjdk/openjdk11-openj9:alpine-slim  java -XshowSe
 ```
 
 结果:
-jdk版本           | 测试结果
-------------------|---------
-openjdk8-openj9   | ok
-openjdk9-openj9   | ok
-openjdk10-openj9  | ok
-openjdk11-openj9  | ok
+
+|jdk版本           | 测试结果 |
+|------------------|---------|
+|openjdk8-openj9   | ok       |
+|openjdk9-openj9   | ok       |
+|openjdk10-openj9  | ok       |
+|openjdk11-openj9  | ok       |
 
 ### 分析
+
 分析之前我们先了解这么一个情况：
 
 ```bash
