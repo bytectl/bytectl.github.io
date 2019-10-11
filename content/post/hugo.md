@@ -17,10 +17,12 @@ menu: ""           # set "main" to add this content to the main menu
 ## 安装
 
 ```bash
+
+# 使用gorpoxy
 export GOPROXY=https://goproxy.cn
 export GO111MODULE=on
 
-go install -v github.com/gohugoio/hugo
+go get -v github.com/gohugoio/hugo
 hugo version
 
 ```

@@ -12,31 +12,31 @@ share: true        # set false to share buttons
 menu: ""           # set "main" to add this content to the main menu
 ---
 
-# iptable
 
 ## 限流
+
 ```bash
-iptables -A INPUT -p tcp –dport 8883  -m limit --limit 100/sec --limit-burst 1000 -j ACCEPT
+iptables -A INPUT -p tcp –dport 443  -m limit --limit 100/sec --limit-burst 1000 -j ACCEPT
 
 -m limit --limit 100/sec 限制每秒连接请求数
 
 –limit-burst：触发阀值，一次涌入数据包数量
+
 ```
 
 ## 连接追踪
 
 ```bash
 yum install conntrack-tools
-conntrack -L  |grep 124 |grep udp
+conntrack -L  |grep 5672 |grep udp
 ```
+
 ## nat
 
 ```bash
-iptables -t nat -A PREROUTING -d 172.16.36.242/32 -p udp --dport 124 -j DNAT --to-destination 172.16.36.180
-iptables -t nat -A POSTROUTING  -p udp --sport 124 -j SNAT --to-source 172.16.36.242
-
-
-iptables -t nat -A PREROUTING -d 172.16.36.179 -p udp --dport 123 -j DNAT --to-destination 172.16.36.177
-iptables -t nat -A POSTROUTING  -p udp --sport 123 -j SNAT --to-source 172.16.36.179
+# 包路由前
+iptables -t nat -A PREROUTING -d 172.16.17.242/32 -p udp --dport 124 -j DNAT --to-destination 172.16.17.180
+# 包准备发送前
+iptables -t nat -A POSTROUTING  -p udp --sport 124 -j SNAT --to-source 172.16.17.242
 
 ```

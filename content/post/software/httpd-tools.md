@@ -22,5 +22,6 @@ yum install httpd-tools
 ## ab
 
 ```bash
+# 压测短连接
 ab -n 1000 -c 100  10.108.167.100:9040/info
 ```
