@@ -10,7 +10,7 @@ steps:
   - git clone https://github.com/olOwOlo/hugo-theme-even themes/even
   - hugo 
 - name: publish
-  image: plugins/gh-release
+  image: plugins/gh-pages
   settings:
     ssh_key:
       from_secret: github_ssh_key
