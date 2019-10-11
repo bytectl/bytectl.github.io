@@ -1,6 +1,6 @@
 ---
 author: "wuxingzhong"
-title: "Kmp"
+title: "Kmp算法"
 date: 2019-10-11T17:18:30+08:00
 draft: false
 tags: ["c", "gist"]
