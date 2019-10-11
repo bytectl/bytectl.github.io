@@ -45,7 +45,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://onenote.bytectl.com/" />
 
-<meta property="og:updated_time" content="2019-10-11T17:16:25+08:00" />
+<meta property="og:updated_time" content="2019-10-11T17:20:47+08:00" />
 <meta itemprop="name" content="onenote">
 <meta itemprop="description" content="Hugo onenote">
 
@@ -118,6 +118,48 @@
           <section id="posts" class="posts">
     <article class="post">
   <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/framework/spring/spring-cloud/">Spring Cloud</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-10-11 </span>
+      <div class="post-category">
+          <a href="/categories//">  </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      start spring-boot-starter-web：全栈Web开发模块，包含嵌入式Tomcat、Spring MVC。 spring-boot-s
+    </div>
+    <div class="read-more">
+      <a href="/post/framework/spring/spring-cloud/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/post/framework/spring/jvm%E8%B5%84%E6%BA%90%E9%99%90%E5%88%B6/">Jvm资源限制</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2019-10-11 </span>
+      <div class="post-category">
+          <a href="/categories//">  </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      前言 参考: https://qingmu.io/2018/12/17/How-to-securely-limit-JVM-resources-in-a-container/ Java与Docker的结合，虽然更好的解决了application的封装问题。但也存在着不兼容，比如Java并不能自动的发现D
+    </div>
+    <div class="read-more">
+      <a href="/post/framework/spring/jvm%E8%B5%84%E6%BA%90%E9%99%90%E5%88%B6/" class="read-more-link">阅读更多</a>
+    </div>
+  </div>
+</article>
+
+    <article class="post">
+  <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/post/software/iptable/">Iptable</a></h1>
     <div class="post-meta">
       <span class="post-time"> 2019-10-10 </span>
@@ -179,46 +221,6 @@
   </div>
 </article>
 
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/hugo/">Hugo</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-10-10 </span>
-      <div class="post-category">
-          <a href="/categories//">  </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      安装 1 2 3 4 5 6 # 使用gorpoxy export GOPROXY=https://goproxy.cn export GO111MODULE=on go get -v github.com/gohugoio/hugo hugo version 简单使用流程 建立site 1 hugo new site bytectl 配置主题 1 2 3 4 5 git clone https://github.com/xxx themes/xxx # 配置 cp themes/xxx/exampleSite/config.yaml ./ vim config.yaml 编写文章
-    </div>
-    <div class="read-more">
-      <a href="/post/hugo/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/post/gist/performance_test/">性能测试</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2019-09-11 </span>
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      性能测试工具 生成测试 编译 和链接时,添加参数 -pg 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 // 服务程序,添加如下代码: static void sighandler( int sig_no ) { exit(0); } int main(int argc, char* argv[]) { // 接收信号
-    </div>
-    <div class="read-more">
-      <a href="/post/gist/performance_test/" class="read-more-link">阅读更多</a>
-    </div>
-  </div>
-</article>
-
     </section>
   
   <nav class="pagination">
@@ -226,7 +228,10 @@
         <i class="iconfont icon-left"></i>
         <span class="prev-text">上一页</span>
       </a>
-    
+    <a class="next" href="/page/3/">
+        <span class="next-text">下一页</span>
+        <i class="iconfont icon-right"></i>
+      </a>
   </nav>
         </div>
         

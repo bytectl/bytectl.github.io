@@ -6,10 +6,28 @@
     <description>Recent content in Posts on onenote</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Oct 2019 17:16:25 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 11 Oct 2019 17:20:47 +0800</lastBuildDate>
     
 	<atom:link href="https://onenote.bytectl.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Perftools</title>
+      <link>https://onenote.bytectl.com/post/gist/perftools/</link>
+      <pubDate>Fri, 11 Oct 2019 17:20:47 +0800</pubDate>
+      
+      <guid>https://onenote.bytectl.com/post/gist/perftools/</guid>
+      <description>google-perftools google-perftools 是一款针对 C/C++ 程序的性能分析工具，它是一个遵守 BSD 协议的开源项目。使用该工具可以对 CPU时间片、内存等系统资源的分配和使用进行分析，本文将重</description>
+    </item>
+    
+    <item>
+      <title>Kmp</title>
+      <link>https://onenote.bytectl.com/post/gist/kmp/</link>
+      <pubDate>Fri, 11 Oct 2019 17:18:30 +0800</pubDate>
+      
+      <guid>https://onenote.bytectl.com/post/gist/kmp/</guid>
+      <description>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70</description>
+    </item>
     
     <item>
       <title>Tcmalloc</title>
