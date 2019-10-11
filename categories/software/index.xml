@@ -17,7 +17,7 @@
       <pubDate>Thu, 10 Oct 2019 19:24:53 +0800</pubDate>
       
       <guid>https://onenote.bytectl.com/post/software/iptable/</guid>
-      <description>iptable 限流 1 2 3 4 5 iptables -A INPUT -p tcp –dport 8883 -m limit --limit 100/sec --limit-burst 1000 -j ACCEPT -m limit --limit 100/sec 限制每秒连接请求数 –limit-burst：触发阀值，一次涌入数据包数量 连接</description>
+      <description>限流 1 2 3 4 5 iptables -A INPUT -p tcp –dport 443 -m limit --limit 100/sec --limit-burst 1000 -j ACCEPT -m limit --limit 100/sec 限制每秒连接请求数 –limit-burst：触发阀值，一次涌入数据包数量 连接追</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       <pubDate>Thu, 10 Oct 2019 19:22:49 +0800</pubDate>
       
       <guid>https://onenote.bytectl.com/post/software/httpd-tools/</guid>
-      <description> httpd-tools install 1  yum install httpd-tools   ab 1  ab -n 1000 -c 100 10.108.167.100:9040/info  </description>
+      <description>httpd-tools install 1 yum install httpd-tools ab 1 2 # 压测短连接 ab -n 1000 -c 100 10.108.167.100:9040/info</description>
     </item>
     
     <item>
@@ -35,7 +35,7 @@
       <pubDate>Thu, 10 Oct 2019 19:20:37 +0800</pubDate>
       
       <guid>https://onenote.bytectl.com/post/software/gitbook/</guid>
-      <description>安装 1 npm install gitbook-cli -g 安装calibre 参考 1 wget -nv -O- https://download.calibre-ebook.com/linux-installer.py | sudo python -c &amp;#34;import sys; main=lambda:sys.stderr.write(&amp;#39;Download failed\n&amp;#39;); exec(sys.stdin.read()); main()&amp;#34; 使用 1 2 3 4 5 6 # 创建书籍 gitbook init # 启动预览 gitbook serve # 本地编译 gitbook build 生成 1 2 3 4 5 6</description>
+      <description>安装 1 npm install gitbook-cli -g 安装calibre 参考 用于生成epub和mobi格式电子书 1 wget -nv -O- https://download.calibre-ebook.com/linux-installer.py | sudo python -c &amp;#34;import sys; main=lambda:sys.stderr.write(&amp;#39;Download failed\n&amp;#39;); exec(sys.stdin.read()); main()&amp;#34; 使用 1 2 3 4 5 6 # 创建书籍 gitbook init # 启动预</description>
     </item>
     
   </channel>

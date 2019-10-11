@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="wuxingzhong" /><meta name="description" content=" httpd-tools install 1  yum install httpd-tools   ab 1  ab -n 1000 -c 100 10.108.167.100:9040/info  " /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="wuxingzhong" /><meta name="description" content="httpd-tools install 1 yum install httpd-tools ab 1 2 # 压测短连接 ab -n 1000 -c 100 10.108.167.100:9040/info" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -39,25 +39,25 @@
 
 
 <meta property="og:title" content="Httpd Tools" />
-<meta property="og:description" content=" httpd-tools install 1  yum install httpd-tools   ab 1  ab -n 1000 -c 100 10.108.167.100:9040/info  " />
+<meta property="og:description" content="httpd-tools install 1 yum install httpd-tools ab 1 2 # 压测短连接 ab -n 1000 -c 100 10.108.167.100:9040/info" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://onenote.bytectl.com/post/software/httpd-tools/" />
 <meta property="article:published_time" content="2019-10-10T19:22:49+08:00" />
 <meta property="article:modified_time" content="2019-10-10T19:22:49+08:00" />
 <meta itemprop="name" content="Httpd Tools">
-<meta itemprop="description" content=" httpd-tools install 1  yum install httpd-tools   ab 1  ab -n 1000 -c 100 10.108.167.100:9040/info  ">
+<meta itemprop="description" content="httpd-tools install 1 yum install httpd-tools ab 1 2 # 压测短连接 ab -n 1000 -c 100 10.108.167.100:9040/info">
 
 
 <meta itemprop="datePublished" content="2019-10-10T19:22:49&#43;08:00" />
 <meta itemprop="dateModified" content="2019-10-10T19:22:49&#43;08:00" />
-<meta itemprop="wordCount" content="14">
+<meta itemprop="wordCount" content="21">
 
 
 
 <meta itemprop="keywords" content="software," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Httpd Tools"/>
-<meta name="twitter:description" content=" httpd-tools install 1  yum install httpd-tools   ab 1  ab -n 1000 -c 100 10.108.167.100:9040/info  "/>
+<meta name="twitter:description" content="httpd-tools install 1 yum install httpd-tools ab 1 2 # 压测短连接 ab -n 1000 -c 100 10.108.167.100:9040/info"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -167,9 +167,11 @@
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">ab -n <span class="m">1000</span> -c <span class="m">100</span>  <span class="m">10</span>.108.167.100:9040/info</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 压测短连接</span>
+ab -n <span class="m">1000</span> -c <span class="m">100</span>  <span class="m">10</span>.108.167.100:9040/info</code></pre></td></tr></table>
 </div>
 </div>
     </div>
