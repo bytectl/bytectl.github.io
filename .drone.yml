@@ -13,8 +13,8 @@ steps:
   settings:
     username: 
       from_secret: github_username
-    ssh_key:
-      from_secret: github_ssh_key
+    password:
+      from_secret: github_password
     pages_directory: public/
     target_branch: master
       
