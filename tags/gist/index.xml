@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>c on onenote</title>
-    <link>https://onenote.bytectl.com/tags/c/</link>
-    <description>Recent content in c on onenote</description>
+    <title>gist on onenote</title>
+    <link>https://onenote.bytectl.com/tags/gist/</link>
+    <description>Recent content in gist on onenote</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 11 Oct 2019 17:16:25 +0800</lastBuildDate>
     
-	<atom:link href="https://onenote.bytectl.com/tags/c/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://onenote.bytectl.com/tags/gist/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -27,15 +27,6 @@
       
       <guid>https://onenote.bytectl.com/post/gist/%E5%87%BD%E6%95%B0%E8%B7%9F%E8%B8%AA/</guid>
       <description>trace 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 /* * @Author: wuxingzhong * @Date: 2017-06-26 14:28:25 * @Email: 330332812@qq.com</description>
-    </item>
-    
-    <item>
-      <title>性能测试</title>
-      <link>https://onenote.bytectl.com/post/gist/performance_test/</link>
-      <pubDate>Wed, 11 Sep 2019 10:54:24 +0200</pubDate>
-      
-      <guid>https://onenote.bytectl.com/post/gist/performance_test/</guid>
-      <description>性能测试工具 生成测试 编译 和链接时,添加参数 -pg 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 // 服务程序,添加如下代码: static void sighandler( int sig_no ) { exit(0); } int main(int argc, char* argv[]) { // 接收信号</description>
     </item>
     
   </channel>

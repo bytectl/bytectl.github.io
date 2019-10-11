@@ -6,10 +6,19 @@
     <description>Recent content in software on onenote</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 10 Oct 2019 19:24:53 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 11 Oct 2019 17:16:25 +0800</lastBuildDate>
     
 	<atom:link href="https://onenote.bytectl.com/tags/software/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tcmalloc</title>
+      <link>https://onenote.bytectl.com/post/gist/tcmalloc/</link>
+      <pubDate>Fri, 11 Oct 2019 17:16:25 +0800</pubDate>
+      
+      <guid>https://onenote.bytectl.com/post/gist/tcmalloc/</guid>
+      <description>libunwind libunwind库为基于64位CPU和操作系统的程序提供了基本的堆栈辗转开解功能，其中包括用于输出堆栈跟踪的API、用于以编程方式辗转开</description>
+    </item>
     
     <item>
       <title>Iptable</title>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>c on onenote</title>
+    <link>https://onenote.bytectl.com/categories/c/</link>
+    <description>Recent content in c on onenote</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 11 Oct 2019 17:16:25 +0800</lastBuildDate>
+    
+	<atom:link href="https://onenote.bytectl.com/categories/c/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tcmalloc</title>
+      <link>https://onenote.bytectl.com/post/gist/tcmalloc/</link>
+      <pubDate>Fri, 11 Oct 2019 17:16:25 +0800</pubDate>
+      
+      <guid>https://onenote.bytectl.com/post/gist/tcmalloc/</guid>
+      <description>libunwind libunwind库为基于64位CPU和操作系统的程序提供了基本的堆栈辗转开解功能，其中包括用于输出堆栈跟踪的API、用于以编程方式辗转开</description>
+    </item>
+    
+  </channel>
+</rss>
