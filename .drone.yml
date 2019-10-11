@@ -1,0 +1,16 @@
+kind: pipeline
+type: docker
+name: hugo
+
+steps:
+- name: build
+  image: golang
+  commands:
+  - go install -v  github.com/gohugoio/hugo
+  - hugo 
+- name: publish
+  image: plugins/gh-release
+  settings:
+    pages_directory: public/
+    
+      
