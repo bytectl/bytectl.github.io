@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>java on onenote</title>
+    <link>https://onenote.bytectl.com/tags/java/</link>
+    <description>Recent content in java on onenote</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 11 Oct 2019 17:01:53 +0800</lastBuildDate>
+    
+	<atom:link href="https://onenote.bytectl.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Spring Cloud</title>
+      <link>https://onenote.bytectl.com/post/framework/spring/spring-cloud/</link>
+      <pubDate>Fri, 11 Oct 2019 17:01:53 +0800</pubDate>
+      
+      <guid>https://onenote.bytectl.com/post/framework/spring/spring-cloud/</guid>
+      <description>start spring-boot-starter-web：全栈Web开发模块，包含嵌入式Tomcat、Spring MVC。 spring-boot-s</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>C_operater - onenote</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="wuxingzhong" /><meta name="description" content="汇编语言&amp;amp;C语言混合编程 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 #include&amp;lt;stdio.h&amp;gt;#include&amp;lt;stdlib.h&amp;gt;void main() { int num=5; //插入汇编语言 _asm{ mov eax,num add eax,5 mov num,eax } printf(&amp;#34;%d\n&amp;#34;, num); system(&amp;#34;pause&amp;#34;); } &#43;,- 1 2 3 4 5 6 7 8 9 10 #include&amp;lt;stdio.h&amp;gt;#include&amp;lt;stdlib.h&amp;gt;void main()" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
+
+
+<link rel="canonical" href="https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/c_operater/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="C_operater" />
+<meta property="og:description" content="汇编语言&amp;C语言混合编程 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 #include&lt;stdio.h&gt;#include&lt;stdlib.h&gt;void main() { int num=5; //插入汇编语言 _asm{ mov eax,num add eax,5 mov num,eax } printf(&#34;%d\n&#34;, num); system(&#34;pause&#34;); } &#43;,- 1 2 3 4 5 6 7 8 9 10 #include&lt;stdio.h&gt;#include&lt;stdlib.h&gt;void main()" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/c_operater/" />
+<meta property="article:published_time" content="2019-10-11T19:00:20+08:00" />
+<meta property="article:modified_time" content="2019-10-11T19:24:26+08:00" />
+<meta itemprop="name" content="C_operater">
+<meta itemprop="description" content="汇编语言&amp;C语言混合编程 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 #include&lt;stdio.h&gt;#include&lt;stdlib.h&gt;void main() { int num=5; //插入汇编语言 _asm{ mov eax,num add eax,5 mov num,eax } printf(&#34;%d\n&#34;, num); system(&#34;pause&#34;); } &#43;,- 1 2 3 4 5 6 7 8 9 10 #include&lt;stdio.h&gt;#include&lt;stdlib.h&gt;void main()">
+
+
+<meta itemprop="datePublished" content="2019-10-11T19:00:20&#43;08:00" />
+<meta itemprop="dateModified" content="2019-10-11T19:24:26&#43;08:00" />
+<meta itemprop="wordCount" content="834">
+
+
+
+<meta itemprop="keywords" content="," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="C_operater"/>
+<meta name="twitter:description" content="汇编语言&amp;C语言混合编程 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 #include&lt;stdio.h&gt;#include&lt;stdlib.h&gt;void main() { int num=5; //插入汇编语言 _asm{ mov eax,num add eax,5 mov num,eax } printf(&#34;%d\n&#34;, num); system(&#34;pause&#34;); } &#43;,- 1 2 3 4 5 6 7 8 9 10 #include&lt;stdio.h&gt;#include&lt;stdlib.h&gt;void main()"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Bytectl</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/onenote-book/">
+        <li class="mobile-menu-item">OneNote</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Bytectl</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/onenote-book/">OneNote</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">C_operater</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-10-11 </span>
+        <div class="post-category">
+            <a href="/categories//">  </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#汇编语言-c语言混合编程">汇编语言&amp;C语言混合编程</a></li>
+<li><a href="#toc_1">+,-</a></li>
+<li><a href="#取模-运算">取模(%)运算</a>
+<ul>
+<li><a href="#模拟-itoa函数">模拟_itoa函数</a></li>
+<li><a href="#toc_4">++, &ndash;</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h2 id="汇编语言-c语言混合编程">汇编语言&amp;C语言混合编程</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">num</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span>
+
+    <span class="c1">//插入汇编语言
+</span><span class="c1"></span>    <span class="n">_asm</span><span class="p">{</span>
+       <span class="n">mov</span> <span class="n">eax</span><span class="p">,</span><span class="n">num</span>
+       <span class="n">add</span> <span class="n">eax</span><span class="p">,</span><span class="mi">5</span>
+       <span class="n">mov</span> <span class="n">num</span><span class="p">,</span><span class="n">eax</span>
+
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">num</span><span class="p">);</span>
+    <span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="toc_1">+,-</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="o">+</span><span class="mi">4</span><span class="p">;</span>  <span class="c1">//新版编译器将+ -当成正负,运算通过
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">*</span> <span class="o">-</span><span class="mi">3</span><span class="p">;</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">num</span><span class="p">);</span> <span class="c1">//20
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">num2</span><span class="p">);</span><span class="c1">// -15
+</span><span class="c1"></span>    <span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="取模-运算">取模(%)运算</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">//正数取模为正数,0 负数取模为负数,0
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;5%%3=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="mi">5</span> <span class="o">%</span> <span class="mi">3</span><span class="p">);</span> 
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;5%%-3=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="mi">5</span> <span class="o">%</span> <span class="o">-</span><span class="mi">3</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;-5%%3=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span> <span class="o">%</span> <span class="mi">3</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;-5%%-3=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span> <span class="o">%</span> <span class="o">-</span><span class="mi">3</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;3%%5=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="mi">3</span><span class="o">%</span> <span class="mi">5</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;3%%-5=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="mi">3</span><span class="o">%-</span><span class="mi">5</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;-3%%5=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="o">%</span> <span class="mi">5</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;-3%%-5=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="o">%</span> <span class="o">-</span><span class="mi">5</span><span class="p">);</span>
+    <span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//模拟取模运算
+</span><span class="c1"></span><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="kt">int</span> <span class="nf">mod</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">//正数取模为正数,0 负数取模为负数,0
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;--------模拟取模测试--------</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;5%%3=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">mod</span><span class="p">(</span><span class="mi">5</span> <span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;5%%-3=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">mod</span><span class="p">(</span><span class="mi">5</span> <span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">)</span> <span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;-5%%3=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">mod</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span> <span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;-5%%-3=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">mod</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span> <span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">)</span> <span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;3%%5=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">mod</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">));</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;3%%-5=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">mod</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">));</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;-3%%5=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">mod</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">));</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;-3%%-5=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">mod</span><span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">));</span>
+    <span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">mod</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">){</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">abs</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">abs</span><span class="p">(</span><span class="n">b</span><span class="p">)){</span>
+       <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">-</span> <span class="p">(</span><span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="n">b</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">a</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="模拟-itoa函数">模拟_itoa函数</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="c1">//16进制(包括16)以内转换
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">my_itoa</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">str</span><span class="p">,</span><span class="kt">int</span> <span class="n">num</span><span class="p">,</span> <span class="kt">int</span> <span class="n">jz</span><span class="p">);</span>
+<span class="c1">//反转两个字符
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">rechar</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">c1</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">c2</span><span class="p">);</span>
+
+<span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">//正数取模为正数,0 负数取模为负数,0
+</span><span class="c1"></span>    <span class="kt">char</span> <span class="n">str</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+    <span class="n">my_itoa</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="mi">100888</span><span class="p">,</span><span class="mi">16</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;str=%s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="n">str</span><span class="p">);</span>
+    <span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+ 
+<span class="p">}</span>
+<span class="kt">void</span> <span class="nf">my_itoa</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">str</span><span class="p">,</span><span class="n">intnum</span><span class="p">,</span> <span class="n">intjz</span><span class="p">){</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">jz</span> <span class="o">&gt;</span> <span class="mi">16</span><span class="p">){</span>
+       <span class="n">str</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;\0&#39;</span><span class="p">;</span>
+       <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">table</span><span class="p">[]</span><span class="o">=</span> <span class="p">{</span> <span class="sc">&#39;0&#39;</span><span class="p">,</span> <span class="sc">&#39;1&#39;</span><span class="p">,</span> <span class="sc">&#39;2&#39;</span><span class="p">,</span> <span class="sc">&#39;3&#39;</span><span class="p">,</span> <span class="sc">&#39;4&#39;</span><span class="p">,</span> <span class="sc">&#39;5&#39;</span><span class="p">,</span> <span class="sc">&#39;6&#39;</span><span class="p">,</span> <span class="sc">&#39;7&#39;</span><span class="p">,</span> <span class="sc">&#39;8&#39;</span><span class="p">,</span> <span class="sc">&#39;9&#39;</span><span class="p">,</span> <span class="sc">&#39;A&#39;</span><span class="p">,</span> <span class="sc">&#39;B&#39;</span><span class="p">,</span> <span class="sc">&#39;C&#39;</span><span class="p">,</span> <span class="sc">&#39;D&#39;</span><span class="p">,</span> <span class="sc">&#39;E&#39;</span><span class="p">,</span> <span class="sc">&#39;F&#39;</span> <span class="p">};</span>
+    <span class="c1">//除n取余法
+</span><span class="c1"></span>    <span class="k">while</span> <span class="p">(</span><span class="n">num</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">){</span>
+       <span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">table</span><span class="p">[</span><span class="n">num</span> <span class="o">%</span> <span class="n">jz</span><span class="p">];</span>
+       <span class="n">num</span> <span class="o">=</span> <span class="n">num</span> <span class="o">/</span> <span class="n">jz</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;\0&#39;</span><span class="p">;</span>
+
+    <span class="c1">//快速反转法
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">i</span><span class="o">--</span><span class="p">;</span>
+    <span class="c1">//反转
+</span><span class="c1"></span>    <span class="k">while</span><span class="p">(</span><span class="n">j</span><span class="o">&lt;</span><span class="n">i</span><span class="p">){</span>
+       <span class="n">rechar</span><span class="p">(</span><span class="o">&amp;</span><span class="n">str</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="o">&amp;</span><span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+       <span class="c1">//相互靠近
+</span><span class="c1"></span>       <span class="n">j</span><span class="o">++</span><span class="p">;</span>
+       <span class="n">i</span><span class="o">--</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="nf">rechar</span><span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="n">c1</span><span class="p">,</span><span class="kt">char</span> <span class="o">*</span><span class="n">c2</span><span class="p">)</span>
+<span class="p">{</span>   <span class="c1">//相同的不换,不然^运算后会变0
+</span><span class="c1"></span>    <span class="k">if</span> <span class="p">(</span><span class="o">*</span><span class="n">c1</span> <span class="o">==</span> <span class="o">*</span><span class="n">c2</span><span class="p">){</span>
+       <span class="k">return</span> <span class="p">;</span>
+    <span class="p">}</span>
+    <span class="o">*</span><span class="n">c1</span> <span class="o">=</span> <span class="o">*</span><span class="n">c1</span><span class="o">^*</span><span class="n">c2</span><span class="p">;</span>
+    <span class="o">*</span><span class="n">c2</span> <span class="o">=</span> <span class="o">*</span><span class="n">c1</span><span class="o">^*</span><span class="n">c2</span><span class="p">;</span>
+    <span class="o">*</span><span class="n">c1</span> <span class="o">=</span> <span class="o">*</span><span class="n">c1</span><span class="o">^*</span><span class="n">c2</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="toc_4">++, &ndash;</h3>
+
+<p>(1)++, &ndash; 运算符优先级高于乘法.</p>
+
+<p>(2)表达式不能用于++, &ndash;</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="c1">//左右值
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span><span class="c1">//x可以被赋值，放在等号的左边被赋值就是左值
+</span><span class="c1"></span>    <span class="c1">//5右值，能放在等号右边的值就是右值
+</span><span class="c1"></span><span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>   <span class="kt">int</span> <span class="n">arr</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span> <span class="p">};</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">ptr</span> <span class="o">=</span> <span class="n">arr</span><span class="p">,</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="c1">//(ptr++)
+</span><span class="c1"></span>    <span class="o">*</span><span class="p">(</span><span class="n">ptr</span><span class="o">++</span><span class="p">)</span> <span class="o">+=</span> <span class="mi">123</span><span class="p">;</span>
+    <span class="c1">//129 7 8  9 10
+</span><span class="c1"></span>    <span class="c1">//ptr 指针指向 7
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d,%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">*</span><span class="n">ptr</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="n">ptr</span><span class="o">++</span><span class="p">));</span><span class="c1">// 8 ,7
+</span><span class="c1"></span>    <span class="c1">//函数参数从右到左入栈 所以先自信*(ptr++) 结果为7 指针指向 8  所以*ptr为8
+</span><span class="c1"></span>    <span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">wuxingzhong</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-10-11
+        <a href="/commit/797e42d4685f9b1dc3c67e6afe2d92a681e784e1" title="add">(797e42d)</a>
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags//"></a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/lang/c_c&#43;&#43;/c_base/">
+            <span class="next-text nav-default">C_base</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="gitalk-container"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var gitalk = new Gitalk({
+        id: '2019-10-11 19:00:20 \x2b0800 \x2b0800',
+        title: 'C_operater',
+        clientID: '3f8b4d8df7c9924dd7ef',
+        clientSecret: 'a769028997d4dec3bc9e64372eee463dfbd4cbba',
+        repo: 'gitalk-bytectl',
+        owner: 'wuxingzhong',
+        admin: ['wuxingzhong'],
+        body: decodeURI(location.href)
+      });
+      gitalk.render('gitalk-container');
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:330332812@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.github.com/wuxingzhong" class="iconfont icon-github" title="github"></a>
+  <a href="https://onenote.bytectl.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/bytectl/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">wuxingzhong</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>C_base - onenote</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="wuxingzhong" /><meta name="description" content="c base printf使用(不会进行数据类型转换) 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 #include&amp;lt;stdio.h&amp;gt;#include&amp;lt;stdlib.h&amp;gt;void main() { int x = 123456; printf(&amp;#34;%d&amp;#34;, x); //以m指定的字段宽度输出，如果数据的位" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
+
+
+<link rel="canonical" href="https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/c_base/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="C_base" />
+<meta property="og:description" content="c base printf使用(不会进行数据类型转换) 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 #include&lt;stdio.h&gt;#include&lt;stdlib.h&gt;void main() { int x = 123456; printf(&#34;%d&#34;, x); //以m指定的字段宽度输出，如果数据的位" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/c_base/" />
+<meta property="article:published_time" content="2019-10-11T19:00:19+08:00" />
+<meta property="article:modified_time" content="2019-10-11T19:24:26+08:00" />
+<meta itemprop="name" content="C_base">
+<meta itemprop="description" content="c base printf使用(不会进行数据类型转换) 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 #include&lt;stdio.h&gt;#include&lt;stdlib.h&gt;void main() { int x = 123456; printf(&#34;%d&#34;, x); //以m指定的字段宽度输出，如果数据的位">
+
+
+<meta itemprop="datePublished" content="2019-10-11T19:00:19&#43;08:00" />
+<meta itemprop="dateModified" content="2019-10-11T19:24:26&#43;08:00" />
+<meta itemprop="wordCount" content="2793">
+
+
+
+<meta itemprop="keywords" content="c," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="C_base"/>
+<meta name="twitter:description" content="c base printf使用(不会进行数据类型转换) 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 #include&lt;stdio.h&gt;#include&lt;stdlib.h&gt;void main() { int x = 123456; printf(&#34;%d&#34;, x); //以m指定的字段宽度输出，如果数据的位"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Bytectl</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/onenote-book/">
+        <li class="mobile-menu-item">OneNote</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Bytectl</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/onenote-book/">OneNote</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">C_base</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-10-11 </span>
+        <div class="post-category">
+            <a href="/categories//">  </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#c-base">c base</a>
+<ul>
+<li><a href="#printf使用-不会进行数据类型转换">printf使用(不会进行数据类型转换)</a></li>
+<li><a href="#补码-反码-赋值">补码, 反码,赋值</a></li>
+<li><a href="#小应用格式化输出-文本左右对齐">小应用格式化输出(文本左右对齐)</a></li>
+<li><a href="#m-nf-m-ne-g">%m.nf ,%m.ne,%g</a></li>
+<li><a href="#printf需要一一对应">printf需要一一对应</a></li>
+<li><a href="#大小写字母">%大小写字母</a></li>
+<li><a href="#sprintf拼接-截取字符串">sprintf拼接,截取字符串</a></li>
+<li><a href="#printf-sprintf注意事项">printf,sprintf注意事项</a></li>
+<li><a href="#sancf-sscanf使用">sancf,sscanf使用</a></li>
+<li><a href="#小应用文本查看器-文本复制-输入-输出重定向">小应用文本查看器(文本复制) #输入,输出重定向</a></li>
+<li><a href="#puts-gets">puts(),gets()</a></li>
+<li><a href="#混合编程">混合编程</a></li>
+<li><a href="#答疑">答疑</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h2 id="c-base">c base</h2>
+
+<h3 id="printf使用-不会进行数据类型转换">printf使用(不会进行数据类型转换)</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">123456</span><span class="p">;</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+    <span class="c1">//以m指定的字段宽度输出，如果数据的位数
+</span><span class="c1"></span>    <span class="c1">//小于m，则左端补以空格；如果大于m按照实际宽度
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">%15d&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span><span class="c1">//限定宽度
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">%16d&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">%4d&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">%04d&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">%016d&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="c1">//如果右边对齐有0，而且大于实际宽度，填充0
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">%-16d&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="c1">//-左边对齐
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">%-016d&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="c1">//-有0会被忽略
+</span><span class="c1"></span>    <span class="c1">//%d-&gt;int,%ld-&gt;long是一样的
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">%d,%ld&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+    <span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="补码-反码-赋值">补码, 反码,赋值</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="kt">void</span> <span class="nf">main2</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">//赋值运算符的本质就是拷贝二进制数据
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">4294967295</span><span class="p">;</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%x&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">);</span>
+    <span class="c1">//1111 1111 1111 1111 1111 1111 1111 1111
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d,%u,%x&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span>
+    <span class="n">getchar</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">main1</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+      <span class="c1">//-1的补码 1111 1111 1111 1111 1111 1111 1111 1111 
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%x&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">x</span><span class="p">);</span>
+    <span class="c1">//printf   不管是什么类型，吧二进制按照自己的方式来解析
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d,%u,%x&#34;</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">x</span><span class="p">);</span> <span class="c1">//-1   4294967295  ffffffff
+</span><span class="c1"></span>    <span class="c1">//负数是补码，只有有符号的数据才有符号位
+</span><span class="c1"></span>    <span class="c1">//1000 0000 0000 0000 0000 0000 0000 0001  原码
+</span><span class="c1"></span>    <span class="c1">//1111 1111 1111 1111 1111 1111 1111 1110  反码
+</span><span class="c1"></span>    <span class="c1">//1111 1111 1111 1111 1111 1111 1111 1111  补码
+</span><span class="c1"></span> 
+    <span class="c1">//%d，第一个符号位     -1
+</span><span class="c1"></span>    <span class="c1">//1111 1111 1111 1111 1111 1111 1111 1111  补码
+</span><span class="c1"></span>    <span class="c1">//1111 1111 1111 1111 1111 1111 1111 1110  反码
+</span><span class="c1"></span>    <span class="c1">//1000 0000 0000 0000 0000 0000 0000 0001  原码
+</span><span class="c1"></span> 
+    <span class="c1">//%u是无符号
+</span><span class="c1"></span>    <span class="c1">//1111 1111 1111 1111 1111 1111 1111 1111
+</span><span class="c1"></span>    <span class="c1">//4294967295
+</span><span class="c1"></span> 
+    <span class="c1">//%x
+</span><span class="c1"></span>    <span class="c1">//1111 1111 1111 1111 1111 1111 1111 1111
+</span><span class="c1"></span>    <span class="c1">// f   f    f     f    f    f    f   f
+</span><span class="c1"></span>    <span class="n">getchar</span><span class="p">();</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="小应用格式化输出-文本左右对齐">小应用格式化输出(文本左右对齐)</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#define   _CRT_SECURE_NO_WARNINGS
+</span><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>   <span class="kt">char</span> <span class="n">name1</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#34;吴兴中&#34;</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">name2</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#34;曹  崟&#34;</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">phone1</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span><span class="o">=</span> <span class="s">&#34;10086&#34;</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">phone2</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#34;13599840407&#34;</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">addr1</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#34;湖南科大&#34;</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">addr2</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#34;湖南科技大学北校区&#34;</span><span class="p">;</span>
+    <span class="c1">//左对齐输出
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;---------------左对齐------------</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%-10s%-20s%-25s</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="s">&#34;姓  名&#34;</span><span class="p">,</span> <span class="s">&#34;手机号码&#34;</span><span class="p">,</span> <span class="s">&#34;所在地址&#34;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%-10s%-20s%-25s</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">name1</span><span class="p">,</span> <span class="n">phone1</span><span class="p">,</span><span class="n">addr1</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%-10s%-20s%-25s</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">name2</span><span class="p">,</span> <span class="n">phone2</span><span class="p">,</span> <span class="n">addr2</span><span class="p">);</span>
+ 
+    <span class="c1">//右对齐输出
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;---------------右对齐------------</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%10s%20s%25s</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="s">&#34;姓  名&#34;</span><span class="p">,</span> <span class="s">&#34;手机号码&#34;</span><span class="p">,</span> <span class="s">&#34;所在地址&#34;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%10s%20s%25s</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">name1</span><span class="p">,</span> <span class="n">phone1</span><span class="p">,</span> <span class="n">addr1</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%10s%20s%25s</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">name2</span><span class="p">,</span> <span class="n">phone2</span><span class="p">,</span> <span class="n">addr2</span><span class="p">);</span>
+    <span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+ 
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="m-nf-m-ne-g">%m.nf ,%m.ne,%g</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%05.2f</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="mf">2.0</span><span class="p">);</span><span class="c1">//%0m.nf 总共输出m列, 不足m前面补0 (其中.占一位)
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%010.2e</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="mf">20.0</span><span class="p">);</span><span class="c1">//%0m.ne科学计数法表示, 不足m前面补0(其中.e+各占用一位)
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;e=%e</span><span class="se">\n</span><span class="s">f=%f</span><span class="se">\n</span><span class="s">g=%g</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="mf">1000000.0</span><span class="p">,</span> <span class="mf">1000000.0</span><span class="p">,</span> <span class="mf">1000000.0</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;e=%e</span><span class="se">\n</span><span class="s">f=%f</span><span class="se">\n</span><span class="s">g=%g</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="mf">12.34567</span><span class="p">,</span> <span class="mf">12.34567</span><span class="p">,</span> <span class="mf">12.34567</span><span class="p">);</span>
+    <span class="c1">//%g输出时,按照宽度最小输出,去除无意义的0;
+</span><span class="c1"></span>    <span class="c1">//%g会以%f或者%e格式输出,并且在输出时去除无意义的0
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%e</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="mi">200</span><span class="p">);</span> <span class="c1">//输出为不定数    200是整型,printf不进行格式转换
+</span><span class="c1"></span>    <span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="printf需要一一对应">printf需要一一对应</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>    
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%f,%f,%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="mf">3.14f</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span> <span class="c1">//3.140000,0.000000,8788589   从出错的那个开始, 后面全部出错
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d,%d,%d,%d,%d,%d,%d,%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span><span class="c1">//垃圾数据
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span> <span class="c1">//少了,后面的不输出,(说明:编译能通过,结果不一定正确)
+</span><span class="c1"></span>    <span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="大小写字母">%大小写字母</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">    %D,%O,%U 直接输出D,O,U 
+    %F,%S输出为空
+    %x,%e,%g 影响输出字母的大小写
+    %c,%C 无影响</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">//%D,%O,%U 直接输出D,O,U %F输出为空
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%2D</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">//D %d对应整数, %找不到对应时, 直接输出后面的字符串D (不包括m.n)
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%O</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="mi">20</span><span class="p">);</span> <span class="c1">// O
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%22U</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span>  <span class="c1">//U  printf(&#34;%二位\n&#34;, 50);  //二位
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%4.3F</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="mf">2.0</span><span class="p">);</span> <span class="c1">// 输出为空   特殊:F 不输出
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%S</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="s">&#34;abc&#34;</span><span class="p">);</span> <span class="c1">// 输出为空   特殊:S 不输出
+</span><span class="c1"></span>
+    <span class="c1">// %X和%x, 影响16进制的大小写 %X大写 %x小写
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%X</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="mi">15</span><span class="p">);</span>    <span class="c1">// F 不影响16进制,影响ABCDEF的输出(以大写输出)
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%x</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="mi">15</span><span class="p">);</span>    <span class="c1">// f  大于10的数,以abcdef(小写输出)
+</span><span class="c1"></span>    <span class="c1">//%e和%E %E 其中E次幂的E大写, %e e小写
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%E</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">);</span>  <span class="c1">//E大写
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%e</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">);</span>  <span class="c1">//e小写
+</span><span class="c1"></span>
+    <span class="c1">//%g和%G 指数输出时 影响E的大小写
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%G</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="mf">200000.1</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%g</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="mf">200000.1</span><span class="p">);</span> 
+
+    <span class="c1">//%c和%C,无影响
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%C</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="mi">50</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%c</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="mi">50</span><span class="p">);</span>  
+
+    <span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="sprintf拼接-截取字符串">sprintf拼接,截取字符串</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#define   _CRT_SECURE_NO_WARNINGS
+</span><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="cm">/*
+</span><span class="cm">    %s     直接输出字符串
+</span><span class="cm">    %ms    输出字符占m列,右对齐
+</span><span class="cm">    %-ms   输出字符占m列,左对齐
+</span><span class="cm">    %m.ns  输出字符前n个,输出字符占m列,右对齐
+</span><span class="cm">    */</span>
+    <span class="kt">char</span> <span class="n">str</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#34;notepad111231234344&#34;</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">str2</span><span class="p">[</span><span class="mi">30</span><span class="p">];</span>
+    <span class="n">sprintf</span><span class="p">(</span><span class="n">str2</span><span class="p">,</span> <span class="s">&#34;%.7s&#34;</span><span class="p">,</span> <span class="n">str</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;echo%10s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">str2</span><span class="p">);</span>
+    <span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="printf-sprintf注意事项">printf,sprintf注意事项</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="c1">//一个解析失败后面的也将解析失败
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%f,%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">//结果 0.000000,0
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d,%f,%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">//1,0.000000,0
+</span><span class="c1"></span>                  <span class="c1">//printf不会进行类型转换.
+</span><span class="c1"></span>                  <span class="c1">//一个解析错误, 后面的也会解析错误
+</span><span class="c1"></span>    <span class="kt">char</span> <span class="n">str</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+    <span class="n">sprintf</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="s">&#34;%f,%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span> <span class="c1">//sprintf同printf
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>  <span class="c1">//0.000000, 0
+</span><span class="c1"></span>    <span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+   
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="sancf-sscanf使用">sancf,sscanf使用</h3>
+
+<ul>
+<li>scanf(格式控制,地址表) sscanf(数据源,格式控制,地址表)</li>
+
+<li><p>sscanf用法同sancf,只用数据源不同, scanf默认数据源为键盘输入</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#define   _CRT_SECURE_NO_WARNINGS  </span><span class="c1">//scanf_s  safe   scanf 不安全
+</span><span class="c1"></span><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="c1">//cd  路径   1.exe&lt;input.txt&gt;output.txt
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">main2</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="kt">char</span> <span class="n">str</span><span class="p">[</span><span class="mi">50</span><span class="p">];</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%s&#34;</span><span class="p">,</span> <span class="n">str</span><span class="p">);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&#34;%x&#34;</span><span class="p">,</span> <span class="n">str</span><span class="p">);</span>
+<span class="n">system</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="nf">main1</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="kt">int</span> <span class="n">num</span><span class="p">;</span>   <span class="c1">//次数
+</span><span class="c1"></span><span class="kt">char</span> <span class="n">strurl</span><span class="p">[</span><span class="mi">30</span><span class="p">];</span><span class="c1">//指令
+</span><span class="c1"></span><span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d%s&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num</span><span class="p">,</span> <span class="n">strurl</span><span class="p">);</span><span class="c1">//扫描格式化数据初始化num,strurl
+</span><span class="c1"></span><span class="n">printf</span><span class="p">(</span><span class="s">&#34;num=%d,strurl=%s&#34;</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">strurl</span><span class="p">);</span>
+<span class="kt">char</span> <span class="n">str</span><span class="p">[</span><span class="mi">50</span><span class="p">];</span>
+<span class="n">sprintf</span><span class="p">(</span><span class="n">str</span><span class="p">,</span> <span class="s">&#34;for /l %%i  in (1,1,%d) do  %s&#34;</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span> <span class="n">strurl</span><span class="p">);</span>
+<span class="n">system</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
+<span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#define  _CRT_SECURE_NO_WARNINGS
+</span><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="c1">//sscanf
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">main</span><span class="p">(){</span>
+<span class="kt">char</span> <span class="n">str</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span><span class="o">=</span><span class="s">&#34;吴兴中男 22&#34;</span><span class="p">;</span>
+<span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+<span class="kt">char</span> <span class="n">sex</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+<span class="kt">int</span>  <span class="n">age</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="n">sscanf</span><span class="p">(</span><span class="n">str</span><span class="p">,</span><span class="s">&#34;%s%s%d&#34;</span><span class="p">,</span><span class="n">name</span><span class="p">,</span><span class="n">sex</span><span class="p">,</span><span class="o">&amp;</span><span class="n">age</span><span class="p">);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&#34;%s,%s,%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span><span class="n">sex</span><span class="p">,</span><span class="n">age</span><span class="p">);</span> <span class="c1">//吴兴中,男,22
+</span><span class="c1"></span><span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//%f
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">mainf</span><span class="p">(){</span>
+<span class="kt">float</span> <span class="n">f</span><span class="o">=</span><span class="mf">0.0</span><span class="p">;</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%7.3f&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">f</span><span class="p">);</span> <span class="c1">//操作无效, 不能指定精度
+</span><span class="c1"></span><span class="n">printf</span><span class="p">(</span><span class="s">&#34;%f</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="n">f</span><span class="p">);</span> <span class="c1">//0.000
+</span><span class="c1"></span><span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+ 
+<span class="c1">//%md 截取 %其他完全一致
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">main33</span><span class="p">(){</span>
+<span class="kt">int</span> <span class="n">num</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">num2</span><span class="p">;</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%2d%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num</span><span class="p">,</span><span class="o">&amp;</span><span class="n">num2</span><span class="p">);</span> <span class="c1">//输入 1234
+</span><span class="c1"></span><span class="n">printf</span><span class="p">(</span><span class="s">&#34;num=%d,num2=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">num</span><span class="p">,</span><span class="n">num2</span><span class="p">);</span> <span class="c1">//输出 num=12, num2 = 34
+</span><span class="c1"></span><span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//*号,抑制符
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">main22</span><span class="p">(){</span>
+<span class="kt">int</span>  <span class="n">num1</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="kt">int</span>  <span class="n">num2</span> <span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+<span class="kt">int</span>  <span class="n">num3</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="c1">//%*d抑制一次输入,可以在读取文本忽略某个值时使用
+</span><span class="c1"></span><span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d   %*d %d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num1</span><span class="p">,</span><span class="o">&amp;</span><span class="n">num2</span><span class="p">,</span><span class="o">&amp;</span><span class="n">num3</span><span class="p">);</span> 
+<span class="c1">//抑制一次,&amp;num3可不写,本身不会被赋值没意义
+</span><span class="c1">//格式控制表中的空白符 ,制表符会被忽略
+</span><span class="c1"></span><span class="n">printf</span><span class="p">(</span><span class="s">&#34;num1=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">num1</span><span class="p">);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&#34;mun2=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">num2</span><span class="p">);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&#34;mun3=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="n">num3</span><span class="p">);</span>
+<span class="c1">//输入123 123
+</span><span class="c1">//输出123,123, 0
+</span><span class="c1"></span><span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//long long
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">main11</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="kt">long</span> <span class="n">lg</span><span class="p">;</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">lg</span><span class="p">);</span> <span class="c1">//%d,long和int等价
+</span><span class="c1"></span><span class="n">printf</span><span class="p">(</span><span class="s">&#34;lg=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">lg</span><span class="p">);</span>
+
+<span class="n">longlong</span> <span class="n">ll</span><span class="p">;</span> <span class="c1">//嵌入式的场合 long ,long long都要%ld
+</span><span class="c1"></span>              <span class="c1">//32位以上的%d就行
+</span><span class="c1"></span><span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%ld&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ll</span><span class="p">);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">&#34;ll=%ld</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">ll</span><span class="p">);</span>
+<span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//double
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">maindb</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="kt">double</span> <span class="n">db</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
+<span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%lf&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">db</span><span class="p">);</span> <span class="c1">//%f,对double无效,应该用%lf
+</span><span class="c1"></span><span class="n">printf</span><span class="p">(</span><span class="s">&#34;db=%f</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="n">db</span><span class="p">);</span>
+<span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+
+<h3 id="小应用文本查看器-文本复制-输入-输出重定向">小应用文本查看器(文本复制) #输入,输出重定向</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#define   _CRT_SECURE_NO_WARNINGS
+</span><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="c1">//cd  路径  view.exe&lt;input.txt&gt;output.txt
+</span><span class="c1">//scanf_s  safe
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">char</span> <span class="n">str</span><span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+    <span class="c1">//向屏幕(文本: 在命令行中用重定向符号&gt;或&lt; )输出所有文字
+</span><span class="c1"></span>    <span class="k">while</span> <span class="p">(</span><span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%s&#34;</span><span class="p">,</span> <span class="n">str</span><span class="p">)</span> <span class="o">!=</span> <span class="n">EOF</span><span class="p">){</span>
+       <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%s</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">str</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="cm">/* 行带空格时应该用gets()
+</span><span class="cm">    while (gets(str) != EOF){
+</span><span class="cm">       puts(str);
+</span><span class="cm">    }
+</span><span class="cm">  */</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="puts-gets">puts(),gets()</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>  
+    <span class="c1">//自动换行
+</span><span class="c1"></span>    <span class="n">puts</span><span class="p">(</span><span class="s">&#34;12345&#34;</span><span class="p">);</span>
+    <span class="c1">//手动换行
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;12345</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+    <span class="kt">char</span> <span class="n">str</span><span class="p">[</span><span class="mi">50</span><span class="p">];</span>
+    <span class="n">gets</span><span class="p">(</span><span class="n">str</span><span class="p">);</span> <span class="c1">//可以获取空格,以回车作为结束接收标志.
+</span><span class="c1"></span>    <span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="混合编程">混合编程</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span><span class="cp"></span>
+<span class="c1">//sscanf
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">){</span>
+       <span class="n">_asm</span><span class="p">{</span>
+           <span class="n">mov</span> <span class="n">eax</span><span class="p">,</span> <span class="n">num</span><span class="p">;</span>
+           <span class="n">add</span> <span class="n">eax</span><span class="p">,</span> <span class="mi">1</span><span class="p">;</span>
+           <span class="n">mov</span> <span class="n">num</span><span class="p">,</span> <span class="n">eax</span><span class="p">;</span>
+       <span class="p">}</span>
+       <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="n">num</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="答疑">答疑</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="c1">//汉语
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="c1">//bool b; C语言没有Bool类型, c++有
+</span><span class="c1"></span>    <span class="c1">//汉字占两个字节
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="sc">&#39;吴&#39;</span><span class="p">));</span> <span class="c1">//4  c语言规定字符常量占4个字节
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="s">&#34;吴&#34;</span><span class="p">));</span> <span class="c1">//3  汉字占2个字节,字符串结尾&#39;\0&#39;占一个字节
+</span><span class="c1"></span>    <span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//块语句,同名变量作用范围
+</span><span class="c1">//同一个区域,同一个块语句变量不能同名
+</span><span class="c1"></span><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">33</span><span class="p">;</span>   <span class="c1">//编译时为 all-a
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">//main-a
+</span><span class="c1"></span>    <span class="c1">//块语句
+</span><span class="c1"></span>    <span class="p">{</span>   <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span> <span class="c1">//1 编译器从上往下开始编译
+</span><span class="c1"></span>       <span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="c1">// main1-a
+</span><span class="c1"></span>       <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">);</span> <span class="c1">//2同一个区域,找到了变量,覆盖了全局(就近原则)
+</span><span class="c1"></span>    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="n">a</span><span class="p">);</span>  <span class="c1">//1
+</span><span class="c1"></span>    <span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">wuxingzhong</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-10-11
+        <a href="/commit/797e42d4685f9b1dc3c67e6afe2d92a681e784e1" title="add">(797e42d)</a>
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/c/">c</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/lang/c_c&#43;&#43;/c_operater/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">C_operater</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/gist/bm/">
+            <span class="next-text nav-default">Bm算法</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="gitalk-container"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var gitalk = new Gitalk({
+        id: '2019-10-11 19:00:19 \x2b0800 \x2b0800',
+        title: 'C_base',
+        clientID: '3f8b4d8df7c9924dd7ef',
+        clientSecret: 'a769028997d4dec3bc9e64372eee463dfbd4cbba',
+        repo: 'gitalk-bytectl',
+        owner: 'wuxingzhong',
+        admin: ['wuxingzhong'],
+        body: decodeURI(location.href)
+      });
+      gitalk.render('gitalk-container');
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:330332812@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.github.com/wuxingzhong" class="iconfont icon-github" title="github"></a>
+  <a href="https://onenote.bytectl.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/bytectl/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">wuxingzhong</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
