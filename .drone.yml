@@ -7,8 +7,7 @@ steps:
   image: golang
   commands:
   - go get -v  github.com/gohugoio/hugo
-  - pwd
-  - chmod +x /drone/src/pull-theme.sh  && /drone/src/pull-theme.sh
+  - git clone https://github.com/olOwOlo/hugo-theme-even themes/even
   - hugo 
 - name: publish
   image: plugins/gh-release
