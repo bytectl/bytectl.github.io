@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>C_point - onenote</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="wuxingzhong" /><meta name="description" content="c指针 改变一个变量，需要这个变量的地址 如果变量是数据，就需要指针 保存变量的地址 /如果是指针，就需要二级指针保存指针变量的地址 指向行的指针 (指" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
+
+
+<link rel="canonical" href="https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/c_point/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="C_point" />
+<meta property="og:description" content="c指针 改变一个变量，需要这个变量的地址 如果变量是数据，就需要指针 保存变量的地址 /如果是指针，就需要二级指针保存指针变量的地址 指向行的指针 (指" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/c_point/" />
+<meta property="article:published_time" content="2019-10-11T19:00:21+08:00" />
+<meta property="article:modified_time" content="2019-10-12T10:27:14+08:00" />
+<meta itemprop="name" content="C_point">
+<meta itemprop="description" content="c指针 改变一个变量，需要这个变量的地址 如果变量是数据，就需要指针 保存变量的地址 /如果是指针，就需要二级指针保存指针变量的地址 指向行的指针 (指">
+
+
+<meta itemprop="datePublished" content="2019-10-11T19:00:21&#43;08:00" />
+<meta itemprop="dateModified" content="2019-10-12T10:27:14&#43;08:00" />
+<meta itemprop="wordCount" content="2974">
+
+
+
+<meta itemprop="keywords" content="," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="C_point"/>
+<meta name="twitter:description" content="c指针 改变一个变量，需要这个变量的地址 如果变量是数据，就需要指针 保存变量的地址 /如果是指针，就需要二级指针保存指针变量的地址 指向行的指针 (指"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Bytectl</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/onenote-book/">
+        <li class="mobile-menu-item">OneNote</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Bytectl</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/onenote-book/">OneNote</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">C_point</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-10-11 </span>
+        <div class="post-category">
+            <a href="/categories//">  </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#c指针">c指针</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h2 id="c指针">c指针</h2>
+
+<ul>
+<li>改变一个变量，需要这个变量的地址</li>
+<li>如果变量是数据，就需要指针    保存变量的地址</li>
+<li>/如果是指针，就需要二级指针保存指针变量的地址</li>
+</ul>
+
+<p>指向行的指针 (指向n-1维的数组指针)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">m</span><span class="p">[</span><span class="mi">4</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span> <span class="p">};</span>
+    <span class="c1">//第一一个指向二维数组的行指针
+</span><span class="c1"></span>    <span class="c1">// 定义一个指向这个二维数组的行指针只要将 int m[x][y]中的m[x]换成 (*p) 注意括号就行了 
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">m</span><span class="p">;</span>
+    <span class="c1">//这样 p[x][y] 就能访问m里的值了
+</span><span class="c1"></span>    <span class="c1">//一个变量循环法
+</span><span class="c1"></span>    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">4</span> <span class="o">*</span> <span class="mi">3</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+       <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%2d &#34;</span><span class="p">,</span> <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">]);</span>
+       <span class="k">if</span> <span class="p">((</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+           <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+       <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="c1">//三维
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="n">m2</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">};</span>
+    <span class="c1">//指向三维行的行指针换m2[2] 为 (*pp) 注意要括号
+</span><span class="c1"></span>    <span class="kt">int</span><span class="p">(</span><span class="o">*</span><span class="n">pp</span><span class="p">)</span> <span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span>  <span class="o">=</span> <span class="n">m2</span><span class="p">;</span>
+ 
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="o">*</span><span class="mi">3</span><span class="o">*</span><span class="mi">2</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+       <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%2d &#34;</span><span class="p">,</span> <span class="n">pp</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="n">i</span><span class="p">]);</span><span class="c1">//在内存中顺序排放的..
+</span><span class="c1"></span>       <span class="k">if</span> <span class="p">((</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+           <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+       <span class="p">}</span>
+       <span class="k">if</span> <span class="p">((</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">%</span> <span class="mi">6</span> <span class="o">==</span> <span class="mi">0</span><span class="p">){</span>
+           <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+       <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="c1">// n维同理
+</span><span class="c1"></span> 
+    <span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>函数传递参数时.(形参定义 为相应维数的指针,或者同样的大小的数组)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="c1">//int a;
+</span><span class="c1">//void go1(int *p);
+</span><span class="c1">//二维
+</span><span class="c1">//int a[3][4];
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">go20</span><span class="p">(</span><span class="kt">int</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)[</span><span class="mi">4</span><span class="p">]){</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">]);</span>
+<span class="p">};</span>
+<span class="c1">//void go21(int *p[4]); //错误这个是 *(p[4]) 是四个列指针
+</span><span class="c1"></span> 
+<span class="kt">void</span> <span class="nf">go22</span><span class="p">(</span><span class="n">intp</span><span class="p">[][</span><span class="mi">4</span><span class="p">]){</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">]);</span>
+<span class="p">};</span>
+<span class="kt">void</span> <span class="nf">go23</span><span class="p">(</span><span class="n">intp</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">]){</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">]);</span>
+<span class="p">};</span>
+ 
+<span class="c1">//int a[1][2][3] 同理 void go(int p[][2][3])
+</span><span class="c1"></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">12</span><span class="p">};</span>
+    <span class="n">go20</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+    <span class="n">go22</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+    <span class="n">go23</span><span class="p">(</span><span class="n">a</span><span class="p">);</span>
+    <span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>指针数组</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">p</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span> <span class="c1">//这个是 *(p[4]) 是4个指针,指向一个变量(或者1列)如同 m[4],将m换成*p
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="n">m</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span> <span class="p">};</span>
+    <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">m</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+    <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">m</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+    <span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">m</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+    <span class="n">p</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">m</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">0</span><span class="p">]);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">p</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">0</span><span class="p">]);</span>
+    <span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>指向函数地址的指针</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">fun</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">){</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">//void fun(int a,int b)
+</span><span class="c1"></span>    <span class="c1">//定义一个函数指针,只要将函数名换成fun  换成(*p)注意括号,其他不变;
+</span><span class="c1"></span>    <span class="kt">void</span> <span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)(</span><span class="kt">int</span> <span class="n">b</span><span class="p">,</span> <span class="kt">int</span> <span class="n">v</span><span class="p">);</span> <span class="c1">//形参名称可以不同, 类型必须相同
+</span><span class="c1"></span>    <span class="n">p</span> <span class="o">=</span> <span class="n">fun</span><span class="p">;</span> <span class="c1">//绑定到函数
+</span><span class="c1"></span>    <span class="n">p</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>  <span class="c1">//将指针变量当成函数名调用函数就行
+</span><span class="c1"></span> 
+    <span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>应用:(一个函数动态的调用另一个函数,(前提:函数的参数和返回值定义相同 ))</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="c1">//做加法
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span><span class="kt">int</span> <span class="n">b</span><span class="p">){</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//做乘法
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">chen</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">){</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span><span class="n">a</span><span class="o">*</span><span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="c1">//计算器   (*fun) 注意要括号
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">jisuanqi</span><span class="p">(</span><span class="kt">void</span> <span class="p">(</span><span class="o">*</span><span class="n">fun</span><span class="p">)(</span><span class="kt">int</span> <span class="n">xa</span><span class="p">,</span> <span class="kt">int</span> <span class="n">xb</span><span class="p">),</span> <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">){</span>
+       <span class="n">fun</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>   <span class="c1">//jisuanqi这个函数动态的调用外部函数add 和chen
+</span><span class="c1"></span>    <span class="n">jisuanqi</span><span class="p">(</span><span class="n">add</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span> <span class="c1">// 7
+</span><span class="c1"></span>    <span class="n">jisuanqi</span><span class="p">(</span><span class="n">chen</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span><span class="c1">// 12
+</span><span class="c1"></span>    <span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>指针大小</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">void</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">p</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="o">**</span><span class="n">pp</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="o">*</span><span class="n">c</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="o">*</span><span class="n">d</span><span class="p">;;</span>
+    <span class="kt">void</span><span class="p">(</span><span class="o">*</span><span class="n">f</span><span class="p">)(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">);</span>
+    <span class="c1">//所有指针,在32位系统下,都是占用4个字节, 32位
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">p</span><span class="p">));</span><span class="c1">//4
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">pp</span><span class="p">));</span><span class="c1">//4
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">c</span><span class="p">));</span><span class="c1">//4
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">d</span><span class="p">));</span><span class="c1">//4
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">f</span><span class="p">));</span><span class="c1">//4
+</span><span class="c1"></span>    <span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>三级指针</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="kt">int</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="kt">int</span> <span class="o">*</span><span class="n">p1</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">;</span>
+<span class="kt">int</span> <span class="n">b</span> <span class="o">=</span> <span class="mi">101</span><span class="p">;</span>
+<span class="kt">int</span> <span class="o">*</span><span class="n">p2</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">;</span>  <span class="c1">//全局变量
+</span><span class="c1">//C程序分配给全局变量内存以后，才启动main函数。
+</span><span class="c1"></span> 
+<span class="kt">void</span> <span class="nf">change</span><span class="p">(</span><span class="kt">int</span> <span class="o">**</span><span class="n">pp</span><span class="p">)</span>  <span class="c1">//新建一个二级指针，指向P2 ,
+</span><span class="c1">//不会改变原来的
+</span><span class="c1"></span><span class="p">{</span>
+    <span class="n">pp</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">p2</span><span class="p">;</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">changepp=%x&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">pp</span><span class="p">);</span>
+<span class="p">}</span>
+  
+<span class="kt">void</span> <span class="nf">changeA</span><span class="p">(</span><span class="kt">int</span> <span class="o">***</span> <span class="n">ppp</span><span class="p">)</span>
+<span class="p">{</span>
+ 
+    <span class="o">*</span><span class="n">ppp</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">p2</span><span class="p">;</span>
+<span class="p">}</span>
+ 
+<span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="o">**</span><span class="n">pp</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">p1</span><span class="p">;</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">main pp=%x&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">pp</span><span class="p">);</span>
+    <span class="c1">//change(pp);
+</span><span class="c1"></span>    <span class="n">changeA</span><span class="p">(</span><span class="o">&amp;</span><span class="n">pp</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">%d&#34;</span><span class="p">,</span> <span class="o">**</span><span class="n">pp</span><span class="p">);</span>
+    <span class="n">getchar</span><span class="p">();</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>指针外挂应用</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;windows.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="c1">//靶子程序
+</span><span class="c1"></span><span class="kt">void</span> <span class="nf">print</span><span class="p">(){</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;我是靶子程序的print,别人调用我</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+    <span class="n">system</span><span class="p">(</span><span class="s">&#34;title 马化腾请吃饭&#34;</span><span class="p">);</span>
+    <span class="n">system</span><span class="p">(</span><span class="s">&#34;color 3f&#34;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">add</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">){</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;加法计算器!</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+    <span class="n">returna</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span>  <span class="n">num1</span> <span class="o">=</span> <span class="mi">2015</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">400</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">p1</span><span class="o">=</span> <span class="o">&amp;</span><span class="n">num1</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">p2</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">num2</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="o">**</span><span class="n">pp</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">p2</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">str</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="sc">&#39;A&#39;</span><span class="p">,</span> <span class="sc">&#39;B&#39;</span><span class="p">,</span> <span class="sc">&#39;C&#39;</span><span class="p">,</span> <span class="sc">&#39;D&#39;</span><span class="p">,</span> <span class="sc">&#39;E&#39;</span> <span class="p">};</span>
+    <span class="kt">char</span> <span class="o">*</span><span class="n">pch</span> <span class="o">=</span> <span class="n">str</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="p">{</span>
+       <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n\n</span><span class="s">&#34;</span><span class="p">);</span>
+       <span class="n">printf</span><span class="p">(</span><span class="s">&#34;print=%x,add=%x</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">print</span><span class="p">,</span> <span class="n">add</span><span class="p">);</span>
+       <span class="n">printf</span><span class="p">(</span><span class="s">&#34;num1=%x,num2=%x</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">num2</span><span class="p">);</span>
+       <span class="n">printf</span><span class="p">(</span><span class="s">&#34;&amp;p1=%x,&amp;p2=%x,&amp;pp=%x,&amp;pch=%x,str=%x</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">p1</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">p2</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">pp</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">pch</span><span class="p">,</span> <span class="n">str</span><span class="p">);</span>
+       <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">);</span>
+       <span class="n">printf</span><span class="p">(</span><span class="s">&#34;num1=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">num1</span><span class="p">);</span>
+       <span class="n">printf</span><span class="p">(</span><span class="s">&#34;num2=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">num2</span><span class="p">);</span>
+       <span class="n">printf</span><span class="p">(</span><span class="s">&#34;*p1=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">*</span><span class="n">p1</span><span class="p">);</span>
+       <span class="n">printf</span><span class="p">(</span><span class="s">&#34;**pp=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">**</span><span class="n">pp</span><span class="p">);</span>
+       <span class="n">printf</span><span class="p">(</span><span class="s">&#34;str=%c</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">*</span><span class="n">pch</span><span class="p">);</span>
+       <span class="n">Sleep</span><span class="p">(</span><span class="mi">12000</span><span class="p">);</span>
+    <span class="p">}</span>
+ 
+    <span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>dll动态库</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="c1">//指针外挂函数
+</span><span class="c1"></span><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp"></span> 
+<span class="n">_declspec</span><span class="p">(</span><span class="n">dllexport</span><span class="p">)</span> <span class="n">go2</span><span class="p">(){</span>
+    <span class="c1">//num1=96f880,num2=96f874&amp;p1=96f868,&amp;p2=96f85c,&amp;pp=96f850,&amp;pch=96f834,str=96f840
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="mh">0x96f880</span><span class="p">;</span> <span class="c1">//num1
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="o">**</span><span class="n">pp</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">**</span><span class="p">)</span><span class="mh">0x96f85c</span><span class="p">;</span> <span class="c1">//p2
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="o">***</span><span class="n">ppp</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">***</span><span class="p">)</span><span class="mh">0x96f850</span><span class="p">;</span>   <span class="c1">//pp
+</span><span class="c1"></span>    <span class="kt">char</span> <span class="o">**</span><span class="n">c</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span>  <span class="o">**</span><span class="p">)</span><span class="mh">0x96f834</span><span class="p">;</span> <span class="c1">//pch
+</span><span class="c1"></span>    <span class="kt">char</span> <span class="o">**</span><span class="n">str</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span> <span class="o">**</span><span class="p">)</span><span class="mh">0x96f840</span><span class="p">;</span>
+    <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="mi">11</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">num</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+    <span class="o">*</span><span class="n">pp</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">num</span><span class="p">;</span>
+ 
+<span class="p">}</span>
+ 
+<span class="n">_declspec</span><span class="p">(</span><span class="n">dllexport</span><span class="p">)</span> <span class="n">go1</span><span class="p">()</span>
+<span class="p">{</span>
+
+    <span class="kt">void</span><span class="p">(</span><span class="o">*</span><span class="n">pri</span><span class="p">)();</span>
+    <span class="kt">int</span><span class="p">(</span><span class="o">*</span><span class="n">ad</span><span class="p">)(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">);</span>
+    <span class="n">pri</span> <span class="o">=</span> <span class="p">(</span><span class="kt">void</span><span class="p">(</span><span class="o">*</span><span class="p">)())</span><span class="mh">0x1051096</span><span class="p">;</span>
+    <span class="n">ad</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">(</span><span class="o">*</span><span class="p">)(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">))</span><span class="mh">0x10510f5</span><span class="p">;</span>
+     <span class="c1">//调用pri 和ad 所指向的函数
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;add=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">ad</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">));</span>
+    <span class="n">pri</span><span class="p">();</span>
+
+<span class="p">}</span>
+<span class="cp">#include</span><span class="cpf">&lt;Windows.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="c1">//外挂
+</span><span class="c1">//改变一个数据，需要数据的地址，也就是指针，int需要int*
+</span><span class="c1">//改变一个指针变量，需要指针的地址，二级指针，int*需要int **
+</span><span class="c1">//改变一个二级指针，需要二级指针的地址，三级指针，int**需要int ***
+</span><span class="c1">//改变一个指针，指针指向数组，需要指针的地址，数组的首地址
+</span><span class="c1">//函数指针，找到地址，进行类型转换，调用函数。
+</span><span class="c1"></span>
+<span class="n">_declspec</span><span class="p">(</span><span class="n">dllexport</span><span class="p">)</span> <span class="n">goB</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">p1</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="mh">0x2ef86c</span><span class="p">;</span><span class="c1">//改变两个变量
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="o">*</span><span class="n">p2</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="mh">0x2ef860</span><span class="p">;</span>
+    <span class="o">*</span><span class="n">p1</span> <span class="o">=</span> <span class="mi">10000</span><span class="p">;</span>
+    <span class="o">*</span><span class="n">p1</span> <span class="o">=</span> <span class="mi">2147483647</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="o">**</span><span class="n">p3</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">**</span><span class="p">)</span><span class="mh">0x2ef854</span><span class="p">;</span>
+    <span class="o">*</span><span class="n">p3</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="mh">0x2ef860</span><span class="p">;</span>     <span class="c1">//改变指针
+</span><span class="c1"></span> 
+    <span class="kt">int</span> <span class="o">***</span><span class="n">p4</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">***</span><span class="p">)</span><span class="mh">0x2ef83c</span><span class="p">;</span>
+    <span class="o">*</span><span class="n">p4</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">**</span><span class="p">)</span><span class="mh">0x2ef848</span><span class="p">;</span>
+ 
+    <span class="kt">char</span> <span class="o">**</span><span class="n">pp</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span> <span class="o">**</span><span class="p">)</span><span class="mh">0x2ef820</span><span class="p">;</span>
+    <span class="o">*</span><span class="n">pp</span> <span class="o">=</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">)(</span><span class="mh">0x2ef82c</span> <span class="o">+</span> <span class="mh">0x1</span><span class="p">);</span>
+ 
+ 
+<span class="p">}</span>
+ 
+<span class="n">_declspec</span><span class="p">(</span><span class="n">dllexport</span><span class="p">)</span> <span class="n">goA</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">);</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span><span class="p">(</span><span class="o">*</span><span class="p">)(</span><span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="p">))</span><span class="mh">0xd010f0</span><span class="p">;</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="n">p</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">));</span>
+ 
+ 
+<span class="p">}</span>
+<span class="n">_declspec</span><span class="p">(</span><span class="n">dllexport</span><span class="p">)</span> <span class="n">go</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">//void msg();
+</span><span class="c1"></span> 
+    <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="p">{</span>
+       <span class="kt">void</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)();</span>
+       <span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="kt">void</span><span class="p">(</span><span class="o">*</span><span class="p">)())</span><span class="mh">0xd91122</span><span class="p">;</span>
+       <span class="n">p</span><span class="p">();</span>
+ 
+    <span class="p">}</span>
+ 
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>外挂原理:</p>
+
+<p>地址操作系统管理,进程的首地址是变动的, 变量地址相对首地址是 固定的</p>
+
+<p>所以只要分析出首地址, 根据相对地址找到变量地址和函数地址</p>
+
+<p>地址相加减注意(依赖于指针的类型)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">sum</span><span class="p">,</span><span class="kt">char</span> <span class="o">*</span><span class="n">args</span><span class="p">[]){</span>
+    <span class="kt">double</span> <span class="n">d</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+    <span class="c1">//指针的减法
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">d</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">-</span> <span class="o">&amp;</span><span class="n">d</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span> <span class="c1">//6 因为&amp;d[9]和&amp;d[3]都是地址,&amp;d[3]+6=&amp;d[9]
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="n">a</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span> <span class="p">};</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+    <span class="c1">//printf(&#34;%d\n&#34;,*++p);//2, ++的优先级高于*
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)</span><span class="o">++</span><span class="p">);</span> <span class="c1">//1 相当于a[0]加了1
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>   <span class="c1">//2
+</span><span class="c1"></span>    <span class="n">system</span><span class="p">(</span><span class="s">&#34;pause&#34;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="nf">main41</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">double</span> <span class="n">a</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">,</span> <span class="mf">6.0</span><span class="p">,</span> <span class="mf">7.0</span><span class="p">,</span> <span class="mf">8.0</span><span class="p">,</span> <span class="mf">9.0</span><span class="p">,</span> <span class="mf">0.0</span> <span class="p">};</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">[</span><span class="mi">9</span><span class="p">]</span> <span class="o">-</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">]);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">%f&#34;</span><span class="p">,</span> <span class="o">*</span><span class="p">(</span><span class="o">&amp;</span><span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">+</span> <span class="mi">2</span><span class="p">));</span>
+    <span class="c1">//指针的减法
+</span><span class="c1"></span>    <span class="c1">//(0x300500+9*8- 0x300500+3*8)/sizeof(double)
+</span><span class="c1"></span>    <span class="c1">//指针的加法
+</span><span class="c1"></span>    <span class="c1">// 0x300500+3*sizeof(double)
+</span><span class="c1"></span>    <span class="n">getchar</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="kt">void</span> <span class="nf">main4</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">//指针与整数不能直接赋值，如果需要赋值，强制类型转换
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="p">(</span><span class="kt">int</span> <span class="o">*</span><span class="p">)</span><span class="mi">1234</span><span class="p">;</span>
+    <span class="c1">//int *p = (int *)01234;
+</span><span class="c1"></span>    <span class="c1">//int m = (int)&amp;p;
+</span><span class="c1"></span><span class="p">}</span>
+ 
+<span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">double</span> <span class="n">a</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">0</span> <span class="p">};</span>
+    <span class="kt">double</span> <span class="o">*</span><span class="n">p</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+    <span class="c1">//printf(&#34;\n%f&#34;, *p++);//11，根据指针取出内容,指针自增
+</span><span class="c1"></span>    <span class="c1">//printf(&#34;\n%f&#34;, *++p);//2 先自增指针，再取出内容
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">%f&#34;</span><span class="p">,</span> <span class="o">++*</span><span class="n">p</span><span class="p">);</span><span class="c1">//先取出内容，然后自增
+</span><span class="c1"></span>    <span class="c1">//都是改变指针，自增，数据没有改变，
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">%f&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+ 
+    <span class="c1">//printf(&#34;%f&#34;, *(p + 3)); //指针的加法
+</span><span class="c1"></span>    <span class="c1">//printf(&#34;%f&#34;, *p + 9); //数据加法
+</span><span class="c1"></span>
+    <span class="c1">//printf(&#34;%d&#34;, sizeof(*p)); //数据类型
+</span><span class="c1"></span>    <span class="c1">//printf(&#34;\n%d&#34;, sizeof(*p++));//double类型
+</span><span class="c1"></span>    <span class="c1">//printf(&#34;\n%d&#34;, sizeof(p)); //指针类型
+</span><span class="c1"></span>    <span class="c1">//printf(&#34;\n%d&#34;, sizeof(p++)); //指针类型
+</span><span class="c1"></span> 
+    <span class="c1">//printf(&#34;%f&#34;, ++(*p));  *p是数据，数据自增
+</span><span class="c1"></span>    <span class="c1">//printf(&#34;\n%f&#34;, a[0]);
+</span><span class="c1"></span>    <span class="c1">//printf(&#34;%f&#34;, (*p)++);  //*p是数据，数据自增
+</span><span class="c1"></span>    <span class="c1">//printf(&#34;\n%f&#34;, a[0]);
+</span><span class="c1"></span>    <span class="n">getchar</span><span class="p">();</span>
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>二维数组与高级指针</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-c" data-lang="c"><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+</span><span class="cp">#include</span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="kt">void</span>   <span class="nf">main11</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span> <span class="p">},</span>
+    <span class="p">{</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span> <span class="p">}</span> <span class="p">};</span>
+    <span class="kt">int</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+ 
+    <span class="c1">//a是一个常量指针
+</span><span class="c1"></span> 
+    <span class="c1">//printf(&#34;\n%x,%x&#34;, main, &amp;main);  //c31154,c31154 相同
+</span><span class="c1"></span>    <span class="c1">//函数名实际上就是地址，取函数地址，函数名会解析为取函数地址
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">%x,%x&#34;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">);</span>  <span class="c1">//5afab0,5afab0 相同
+</span><span class="c1"></span>    <span class="c1">//数组名，数组名实际上就是地址，数组名会取数组的地址，
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">%x,%x&#34;</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">p</span><span class="p">);</span> <span class="c1">//变量指针 , 5afab0,5afaa4 不同
+</span><span class="c1"></span> 
+    <span class="n">getchar</span><span class="p">();</span>
+ 
+<span class="p">}</span>
+<span class="kt">void</span> <span class="nf">main12</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span> <span class="p">};</span>
+    <span class="c1">//int *p = a;  “初始化”: 无法从“int [3][4]”转换为“int *”
+</span><span class="c1"></span>    <span class="c1">//int **p = a; 无法从“int [3][4]”转换为“int **”
+</span><span class="c1"></span>    <span class="kt">int</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>   <span class="c1">//一个指针指向一个有四个元素一维数组,
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d,%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">p</span><span class="p">),</span> <span class="k">sizeof</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">));</span><span class="c1">//4,16
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d,%d,%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">p</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">p</span> <span class="o">+</span> <span class="mi">2</span><span class="p">);</span><span class="c1">//行指针，每移动一个，一行的大小
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d,%d,%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">p</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;%d,p[0]=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">p</span><span class="p">),</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">p</span><span class="p">[</span><span class="mi">0</span><span class="p">]));</span><span class="c1">//4,p[0]=16
+</span><span class="c1"></span>    <span class="n">getchar</span><span class="p">();</span>
+<span class="p">}</span>
+ 
+<span class="kt">void</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span> <span class="p">};</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;a=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">a</span><span class="p">));</span><span class="c1">//数组大小。a=48
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;*a=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="o">*</span><span class="n">a</span><span class="p">));</span> <span class="c1">//*a=16
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;*a+0=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="o">*</span><span class="n">a</span> <span class="o">+</span> <span class="mi">0</span><span class="p">));</span> <span class="c1">//*a+0=4 相当于*(a+0)+0 列指针
+</span><span class="c1"></span>    <span class="kt">int</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span><span class="c1">//用一个指向有四个元素的一维数组的指针指向a
+</span><span class="c1"></span>    <span class="n">printf</span><span class="p">(</span><span class="s">&#34;</span><span class="se">\n</span><span class="s">p=%d,*p=%d,*p+0=%d</span><span class="se">\n</span><span class="s">&#34;</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">p</span><span class="p">),</span> <span class="k">sizeof</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">),</span> <span class="k">sizeof</span><span class="p">(</span><span class="o">*</span><span class="n">p</span> <span class="o">+</span> <span class="mi">0</span><span class="p">));</span>
+    <span class="c1">//p=4,*p=16,*p+0=4
+</span><span class="c1"></span>    <span class="c1">// p行指针
+</span><span class="c1"></span>    <span class="c1">// *p取出行指针内容，可以得到一行多大
+</span><span class="c1"></span>    <span class="c1">//*p+0，列指针;//在某一行，取出第0个元素的地址 ,就是int类型
+</span><span class="c1"></span>
+    <span class="kt">char</span> <span class="n">str</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#34;calc&#34;</span><span class="p">;</span>   <span class="c1">//str会被解析为地址
+</span><span class="c1"></span>    <span class="c1">//system((const char *)&amp;str);
+</span><span class="c1"></span>    <span class="c1">//system(str);
+</span><span class="c1"></span>    <span class="n">getchar</span><span class="p">();</span>
+<span class="p">}</span>
+ 
+<span class="cp">#include</span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="kt">void</span> <span class="nf">main12313</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">//第一个下标挖掉，数组名替换成(*p)
+</span><span class="c1"></span>    <span class="c1">//指针指向二维数组
+</span><span class="c1"></span>    <span class="kt">int</span> <span class="n">a1</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">px</span> <span class="o">=</span> <span class="n">a1</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">a</span><span class="p">[</span><span class="mi">10</span><span class="p">][</span><span class="mi">9</span><span class="p">];</span>
+    <span class="kt">int</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="p">)[</span><span class="mi">9</span><span class="p">]</span> <span class="o">=</span> <span class="n">a</span><span class="p">;</span>
+ 
+    <span class="kt">int</span> <span class="n">b</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">][</span><span class="mi">5</span><span class="p">];</span>
+    <span class="kt">int</span><span class="p">(</span><span class="o">*</span><span class="n">p1</span><span class="p">)[</span><span class="mi">4</span><span class="p">][</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="n">b</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">];</span>
+    <span class="kt">int</span><span class="p">(</span><span class="o">*</span><span class="n">p2</span><span class="p">)[</span><span class="mi">2</span><span class="p">][</span><span class="mi">3</span><span class="p">][</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
+ 
+<span class="p">}</span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">wuxingzhong</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-10-12
+        <a href="/commit/7b5daf40a4fd23566118e6ab05b5f06edca89c11" title="add">(7b5daf4)</a>
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags//"></a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/lang/c_c&#43;&#43;/linux_module/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Linux module</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/lang/c_c&#43;&#43;/c_stroge/">
+            <span class="next-text nav-default">储存类型</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="gitalk-container"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var gitalk = new Gitalk({
+        id: '2019-10-11 19:00:21 \x2b0800 \x2b0800',
+        title: 'C_point',
+        clientID: '3f8b4d8df7c9924dd7ef',
+        clientSecret: 'a769028997d4dec3bc9e64372eee463dfbd4cbba',
+        repo: 'gitalk-bytectl',
+        owner: 'wuxingzhong',
+        admin: ['wuxingzhong'],
+        body: decodeURI(location.href)
+      });
+      gitalk.render('gitalk-container');
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:330332812@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.github.com/wuxingzhong" class="iconfont icon-github" title="github"></a>
+  <a href="https://onenote.bytectl.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/bytectl/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">wuxingzhong</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

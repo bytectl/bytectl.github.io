@@ -6,10 +6,28 @@
     <description>Recent content in c on onenote</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Oct 2019 19:00:19 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 11 Oct 2019 19:00:23 +0800</lastBuildDate>
     
 	<atom:link href="https://onenote.bytectl.com/tags/c/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>String</title>
+      <link>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/string/</link>
+      <pubDate>Fri, 11 Oct 2019 19:00:23 +0800</pubDate>
+      
+      <guid>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/string/</guid>
+      <description>c string 注: C语言中没有字符串这个特定类型, C语言风格字符串: 以&amp;rsquo;\0&amp;rsquo;作为结束符 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19</description>
+    </item>
+    
+    <item>
+      <title>储存类型</title>
+      <link>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/c_stroge/</link>
+      <pubDate>Fri, 11 Oct 2019 19:00:21 +0800</pubDate>
+      
+      <guid>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/c_stroge/</guid>
+      <description>储存类型 auto static extern :extern变量又称全局变量，放在静态存储区 register 一个由C编译的程序占用的内存大致分为以下几部分： • 栈区（stack）：由编译器</description>
+    </item>
     
     <item>
       <title>C_base</title>

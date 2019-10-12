@@ -6,10 +6,46 @@
     <description>Recent content on onenote</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Oct 2019 19:00:20 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 11 Oct 2019 19:00:23 +0800</lastBuildDate>
     
 	<atom:link href="https://onenote.bytectl.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>String</title>
+      <link>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/string/</link>
+      <pubDate>Fri, 11 Oct 2019 19:00:23 +0800</pubDate>
+      
+      <guid>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/string/</guid>
+      <description>c string 注: C语言中没有字符串这个特定类型, C语言风格字符串: 以&amp;rsquo;\0&amp;rsquo;作为结束符 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19</description>
+    </item>
+    
+    <item>
+      <title>Linux module</title>
+      <link>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/linux_module/</link>
+      <pubDate>Fri, 11 Oct 2019 19:00:22 +0800</pubDate>
+      
+      <guid>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/linux_module/</guid>
+      <description>module 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 #include&amp;lt;linux/init.h&amp;gt; //驱动初始化#include&amp;lt;linux/module.h&amp;gt; //驱动模块 MODULE_LICENSE(&amp;#34;Dual BSD/GPL&amp;#34;); //遵循lin</description>
+    </item>
+    
+    <item>
+      <title>C_point</title>
+      <link>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/c_point/</link>
+      <pubDate>Fri, 11 Oct 2019 19:00:21 +0800</pubDate>
+      
+      <guid>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/c_point/</guid>
+      <description>c指针 改变一个变量，需要这个变量的地址 如果变量是数据，就需要指针 保存变量的地址 /如果是指针，就需要二级指针保存指针变量的地址 指向行的指针 (指</description>
+    </item>
+    
+    <item>
+      <title>储存类型</title>
+      <link>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/c_stroge/</link>
+      <pubDate>Fri, 11 Oct 2019 19:00:21 +0800</pubDate>
+      
+      <guid>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/c_stroge/</guid>
+      <description>储存类型 auto static extern :extern变量又称全局变量，放在静态存储区 register 一个由C编译的程序占用的内存大致分为以下几部分： • 栈区（stack）：由编译器</description>
+    </item>
     
     <item>
       <title>C_operater</title>

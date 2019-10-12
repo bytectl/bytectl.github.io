@@ -2,42 +2,84 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/c_operater/</loc>
-    <lastmod>2019-10-11T19:24:26+08:00</lastmod>
+    <loc>https://onenote.bytectl.com/tags/c/</loc>
+    <lastmod>2019-10-12T10:27:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://onenote.bytectl.com/categories/c/</loc>
+    <lastmod>2019-10-12T10:27:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://onenote.bytectl.com/categories/</loc>
-    <lastmod>2019-10-11T19:24:26+08:00</lastmod>
+    <lastmod>2019-10-12T10:27:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://onenote.bytectl.com/</loc>
-    <lastmod>2019-10-11T19:24:26+08:00</lastmod>
+    <lastmod>2019-10-12T10:27:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://onenote.bytectl.com/post/</loc>
-    <lastmod>2019-10-11T19:24:26+08:00</lastmod>
+    <lastmod>2019-10-12T10:27:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/string/</loc>
+    <lastmod>2019-10-12T10:27:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://onenote.bytectl.com/tags/string/</loc>
+    <lastmod>2019-10-12T10:27:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://onenote.bytectl.com/tags/</loc>
-    <lastmod>2019-10-11T19:24:26+08:00</lastmod>
+    <lastmod>2019-10-12T10:27:14+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://onenote.bytectl.com/tags/c/</loc>
+    <loc>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/linux_module/</loc>
+    <lastmod>2019-10-12T10:27:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/c_point/</loc>
+    <lastmod>2019-10-12T10:27:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/c_stroge/</loc>
+    <lastmod>2019-10-12T10:27:14+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/c_operater/</loc>
     <lastmod>2019-10-11T19:24:26+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -79,13 +121,6 @@
   </url>
   
   <url>
-    <loc>https://onenote.bytectl.com/categories/c/</loc>
-    <lastmod>2019-10-11T17:17:36+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://onenote.bytectl.com/tags/software/</loc>
     <lastmod>2019-10-11T17:17:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -114,14 +149,14 @@
   </url>
   
   <url>
-    <loc>https://onenote.bytectl.com/categories/java/</loc>
+    <loc>https://onenote.bytectl.com/tags/java/</loc>
     <lastmod>2019-10-11T19:24:26+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://onenote.bytectl.com/tags/java/</loc>
+    <loc>https://onenote.bytectl.com/categories/java/</loc>
     <lastmod>2019-10-11T19:24:26+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

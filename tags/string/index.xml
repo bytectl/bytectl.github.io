@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>c on onenote</title>
-    <link>https://onenote.bytectl.com/categories/c/</link>
-    <description>Recent content in c on onenote</description>
+    <title>string on onenote</title>
+    <link>https://onenote.bytectl.com/tags/string/</link>
+    <description>Recent content in string on onenote</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 11 Oct 2019 19:00:23 +0800</lastBuildDate>
     
-	<atom:link href="https://onenote.bytectl.com/categories/c/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://onenote.bytectl.com/tags/string/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/string/</guid>
       <description>c string 注: C语言中没有字符串这个特定类型, C语言风格字符串: 以&amp;rsquo;\0&amp;rsquo;作为结束符 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19</description>
-    </item>
-    
-    <item>
-      <title>Tcmalloc</title>
-      <link>https://onenote.bytectl.com/post/gist/tcmalloc/</link>
-      <pubDate>Fri, 11 Oct 2019 17:16:25 +0800</pubDate>
-      
-      <guid>https://onenote.bytectl.com/post/gist/tcmalloc/</guid>
-      <description>libunwind libunwind库为基于64位CPU和操作系统的程序提供了基本的堆栈辗转开解功能，其中包括用于输出堆栈跟踪的API、用于以编程方式辗转开</description>
     </item>
     
   </channel>
