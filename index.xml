@@ -12,6 +12,16 @@
     
     
     <item>
+      <title>About</title>
+      <link>https://onenote.bytectl.com/about/</link>
+      <pubDate>Thu, 10 Oct 2019 19:20:37 +0800</pubDate>
+      
+      <guid>https://onenote.bytectl.com/about/</guid>
+      <description>mermaid
+1 2 3 4  graph LR A --- B B--&amp;gt;C[fa:fa-ban forbidden] B--&amp;gt;D(fa:fa-spinner);  </description>
+    </item>
+    
+    <item>
       <title>String</title>
       <link>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/string/</link>
       <pubDate>Fri, 11 Oct 2019 19:00:23 +0800</pubDate>
