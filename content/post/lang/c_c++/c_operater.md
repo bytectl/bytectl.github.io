@@ -1,6 +1,6 @@
 ---
 author: "wuxingzhong"
-title: "C_operater"
+title: "C 运算符"
 date: 2019-10-11T19:00:20+08:00
 draft: false
 tags: [""]

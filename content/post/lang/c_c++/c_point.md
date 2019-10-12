@@ -1,6 +1,6 @@
 ---
 author: "wuxingzhong"
-title: "C_point"
+title: "c指针"
 date: 2019-10-11T19:00:21+08:00
 draft: false
 tags: [""]
@@ -16,7 +16,7 @@ menu: ""           # set "main" to add this content to the main menu
 
 - 改变一个变量，需要这个变量的地址
 - 如果变量是数据，就需要指针    保存变量的地址
-- /如果是指针，就需要二级指针保存指针变量的地址
+- 如果是指针，就需要二级指针保存指针变量的地址
 
 指向行的指针 (指向n-1维的数组指针)
 

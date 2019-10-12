@@ -1,6 +1,6 @@
 ---
 author: "wuxingzhong"
-title: "C_base"
+title: "C基础输入输出"
 date: 2019-10-11T19:00:19+08:00
 draft: false
 tags: ["c"]
@@ -12,7 +12,6 @@ share: true        # set false to share buttons
 menu: ""           # set "main" to add this content to the main menu
 ---
 
-## c base
 
 ### printf使用(不会进行数据类型转换)
 
