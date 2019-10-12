@@ -30,12 +30,12 @@
     </item>
     
     <item>
-      <title>C_point</title>
+      <title>c指针</title>
       <link>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/c_point/</link>
       <pubDate>Fri, 11 Oct 2019 19:00:21 +0800</pubDate>
       
       <guid>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/c_point/</guid>
-      <description>c指针 改变一个变量，需要这个变量的地址 如果变量是数据，就需要指针 保存变量的地址 /如果是指针，就需要二级指针保存指针变量的地址 指向行的指针 (指</description>
+      <description>c指针 改变一个变量，需要这个变量的地址 如果变量是数据，就需要指针 保存变量的地址 如果是指针，就需要二级指针保存指针变量的地址 指向行的指针 (指向</description>
     </item>
     
     <item>
@@ -44,11 +44,11 @@
       <pubDate>Fri, 11 Oct 2019 19:00:21 +0800</pubDate>
       
       <guid>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/c_stroge/</guid>
-      <description>储存类型 auto static extern :extern变量又称全局变量，放在静态存储区 register 一个由C编译的程序占用的内存大致分为以下几部分： • 栈区（stack）：由编译器</description>
+      <description>储存类型 auto static extern :extern变量又称全局变量，放在静态存储区 register 一个由C编译的程序占用的内存大致分为以下几部分： 栈区（stack）：由编译器自</description>
     </item>
     
     <item>
-      <title>C_operater</title>
+      <title>C 运算符</title>
       <link>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/c_operater/</link>
       <pubDate>Fri, 11 Oct 2019 19:00:20 +0800</pubDate>
       
@@ -57,12 +57,12 @@
     </item>
     
     <item>
-      <title>C_base</title>
+      <title>C基础输入输出</title>
       <link>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/c_base/</link>
       <pubDate>Fri, 11 Oct 2019 19:00:19 +0800</pubDate>
       
       <guid>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/c_base/</guid>
-      <description>c base printf使用(不会进行数据类型转换) 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 #include&amp;lt;stdio.h&amp;gt;#include&amp;lt;stdlib.h&amp;gt;void main() { int x = 123456; printf(&amp;#34;%d&amp;#34;, x); //以m指定的字段宽度输出，如果数据的位</description>
+      <description>printf使用(不会进行数据类型转换) 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 #include&amp;lt;stdio.h&amp;gt;#include&amp;lt;stdlib.h&amp;gt;void main() { int x = 123456; printf(&amp;#34;%d&amp;#34;, x); //以m指定的字段宽度输出，如果数据的位数 /</description>
     </item>
     
     <item>

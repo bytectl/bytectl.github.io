@@ -26,16 +26,16 @@
       <pubDate>Fri, 11 Oct 2019 19:00:21 +0800</pubDate>
       
       <guid>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/c_stroge/</guid>
-      <description>储存类型 auto static extern :extern变量又称全局变量，放在静态存储区 register 一个由C编译的程序占用的内存大致分为以下几部分： • 栈区（stack）：由编译器</description>
+      <description>储存类型 auto static extern :extern变量又称全局变量，放在静态存储区 register 一个由C编译的程序占用的内存大致分为以下几部分： 栈区（stack）：由编译器自</description>
     </item>
     
     <item>
-      <title>C_base</title>
+      <title>C基础输入输出</title>
       <link>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/c_base/</link>
       <pubDate>Fri, 11 Oct 2019 19:00:19 +0800</pubDate>
       
       <guid>https://onenote.bytectl.com/post/lang/c_c&#43;&#43;/c_base/</guid>
-      <description>c base printf使用(不会进行数据类型转换) 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 #include&amp;lt;stdio.h&amp;gt;#include&amp;lt;stdlib.h&amp;gt;void main() { int x = 123456; printf(&amp;#34;%d&amp;#34;, x); //以m指定的字段宽度输出，如果数据的位</description>
+      <description>printf使用(不会进行数据类型转换) 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 #include&amp;lt;stdio.h&amp;gt;#include&amp;lt;stdlib.h&amp;gt;void main() { int x = 123456; printf(&amp;#34;%d&amp;#34;, x); //以m指定的字段宽度输出，如果数据的位数 /</description>
     </item>
     
     <item>
