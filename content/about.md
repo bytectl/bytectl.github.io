@@ -10,16 +10,20 @@ banner: ""
 comments: true     # set false to hide Disqus comments
 share: true        # set false to share buttons
 menu: "main"
-weight: 50
+weight: 60
 ---
 
-mermaid
 
-```mermaid
 
+{{<mermaid align="left">}}
+
+graph TD
+    Start --> Stop
+{{</mermaid>}}
+
+<div class="mermaid">
 graph LR
     A --- B
     B-->C[fa:fa-ban forbidden]
     B-->D(fa:fa-spinner);
-
-```
+</div>
