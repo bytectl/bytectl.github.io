@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>sql操作 - onenote</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="wuxingzhong" /><meta name="description" content="登录 1 mysql -h localhost -uroot -proot 数据库操作 创建数据库 1 create database dbname charset utf8 查看数据库 1 show databases; 选择数据库 1 use dbname; 删除数据库 1 drop database dbname; 表操作 创建数据表 1 2 3 4 5 create table tbname ( id int(10) primary key" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
+
+
+<link rel="canonical" href="https://onenote.bytectl.com/post/lang/sql/%E4%BB%B7%E5%80%BCsql/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="sql操作" />
+<meta property="og:description" content="登录 1 mysql -h localhost -uroot -proot 数据库操作 创建数据库 1 create database dbname charset utf8 查看数据库 1 show databases; 选择数据库 1 use dbname; 删除数据库 1 drop database dbname; 表操作 创建数据表 1 2 3 4 5 create table tbname ( id int(10) primary key" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://onenote.bytectl.com/post/lang/sql/%E4%BB%B7%E5%80%BCsql/" />
+<meta property="article:published_time" content="2019-10-11T19:08:37+08:00" />
+<meta property="article:modified_time" content="2019-10-11T19:08:37+08:00" />
+<meta itemprop="name" content="sql操作">
+<meta itemprop="description" content="登录 1 mysql -h localhost -uroot -proot 数据库操作 创建数据库 1 create database dbname charset utf8 查看数据库 1 show databases; 选择数据库 1 use dbname; 删除数据库 1 drop database dbname; 表操作 创建数据表 1 2 3 4 5 create table tbname ( id int(10) primary key">
+
+
+<meta itemprop="datePublished" content="2019-10-11T19:08:37&#43;08:00" />
+<meta itemprop="dateModified" content="2019-10-11T19:08:37&#43;08:00" />
+<meta itemprop="wordCount" content="3142">
+
+
+
+<meta itemprop="keywords" content="," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="sql操作"/>
+<meta name="twitter:description" content="登录 1 mysql -h localhost -uroot -proot 数据库操作 创建数据库 1 create database dbname charset utf8 查看数据库 1 show databases; 选择数据库 1 use dbname; 删除数据库 1 drop database dbname; 表操作 创建数据表 1 2 3 4 5 create table tbname ( id int(10) primary key"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Bytectl</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a><a href="/onenote-book/">
+        <li class="mobile-menu-item">OneNote</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Bytectl</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/onenote-book/">OneNote</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">sql操作</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-10-11 </span>
+        <div class="post-category">
+            <a href="/categories//">  </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#登录">登录</a></li>
+<li><a href="#数据库操作">数据库操作</a></li>
+<li><a href="#表操作">表操作</a>
+<ul>
+<li><a href="#索引">索引</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#栏目表">栏目表</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h2 id="登录">登录</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">mysql -h localhost -uroot -proot</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="数据库操作">数据库操作</h2>
+
+<p>创建数据库</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">create</span> <span class="k">database</span> <span class="n">dbname</span> <span class="n">charset</span> <span class="n">utf8</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>查看数据库</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">show</span> <span class="n">databases</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>选择数据库</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="n">use</span> <span class="n">dbname</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>删除数据库</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">drop</span> <span class="k">database</span> <span class="n">dbname</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="表操作">表操作</h2>
+
+<p>创建数据表</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">create</span> <span class="k">table</span> <span class="n">tbname</span> <span class="p">(</span>
+		<span class="n">id</span> <span class="nb">int</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">primary</span> <span class="k">key</span> <span class="n">auto_increment</span><span class="p">,</span>
+		<span class="n">name</span> <span class="nb">char</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">not</span> <span class="k">null</span> <span class="n">defaule</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+		<span class="p">.......</span>
+	    <span class="p">)</span><span class="n">engine</span> <span class="n">myisam</span><span class="o">/</span><span class="n">innodb</span> <span class="n">charset</span> <span class="n">utf8</span><span class="o">/</span><span class="n">gbk</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>设定环境编码的命令</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">set</span> <span class="k">names</span> <span class="n">gbk</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>查看数据表</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">show</span> <span class="n">tables</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>查看建表语句</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">show</span> <span class="k">create</span> <span class="k">table</span> <span class="n">tbname</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>查看表结构</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">desc</span> <span class="n">tbname</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>修改表(增加列)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">alter</span> <span class="k">table</span> <span class="n">tbname</span> <span class="k">add</span> <span class="err">列名称</span> <span class="err">列类型</span> </code></pre></td></tr></table>
+</div>
+</div>
+<p>修改表(修改列)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">alter</span> <span class="k">table</span> <span class="n">tbname</span> <span class="n">change</span> <span class="err">旧列名</span> <span class="err">新列名</span> <span class="err">列类型</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>修改表(删除列)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">alter</span> <span class="k">table</span> <span class="n">tbname</span> <span class="k">drop</span> <span class="err">列名称</span></code></pre></td></tr></table>
+</div>
+</div>
+<h3 id="索引">索引</h3>
+
+<ol>
+<li><p>提高查询速度,但是降低了增删改的速度,所以使用索引时,要综合考虑</p></li>
+
+<li><p>索引不是越多越好,一般我们在常出现于条件表达式中的列加索引</p></li>
+
+<li><p>值越分散的列，索引的效果越好</p></li>
+</ol>
+
+<p>索引类型</p>
+
+<ol>
+<li><p>primary key 主键索引</p></li>
+
+<li><p>index 普通索引</p></li>
+
+<li><p>unique index 唯一性索引</p></li>
+
+<li><p>fulltext index 全文索引</p></li>
+</ol>
+
+<p>修改表(增加主键索引)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">alter</span> <span class="k">table</span> <span class="n">tbname</span> <span class="k">add</span> <span class="k">primary</span> <span class="k">key</span><span class="p">(</span><span class="err">主键所在列名</span><span class="p">)</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>修改表(删除主键索引)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">alter</span> <span class="k">table</span> <span class="n">tbname</span> <span class="k">drop</span> <span class="k">primary</span> <span class="k">key</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>修改表(增加唯一索引)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">alter</span> <span class="k">table</span> <span class="n">tbname</span> <span class="k">add</span> <span class="k">unique</span> <span class="k">index</span> <span class="err">索引名</span><span class="p">(</span><span class="err">列名</span><span class="p">);</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>修改表(增加全文索引)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">alter</span> <span class="k">table</span> <span class="n">tbname</span> <span class="k">add</span> <span class="n">fulltext</span> <span class="k">index</span> <span class="err">索引名</span><span class="p">(</span><span class="err">列名</span><span class="p">);</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>修改表(删除普通索引)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">alter</span> <span class="k">table</span> <span class="n">tbname</span> <span class="k">drop</span> <span class="k">unique</span> <span class="k">index</span> <span class="err">索引名</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>清空数据表内容</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">truncate</span> <span class="n">tbname</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>删除表</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">drop</span> <span class="k">table</span> <span class="k">admin</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>插入数据</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">insert</span> <span class="k">into</span> <span class="n">tbname</span> <span class="p">(</span><span class="err">列</span><span class="mi">1</span><span class="p">,</span><span class="err">列</span><span class="mi">2</span><span class="p">,</span><span class="err">列</span><span class="p">...)</span> <span class="k">values</span><span class="p">(</span><span class="n">val1</span><span class="p">,</span><span class="n">val2</span><span class="p">,</span><span class="n">val</span><span class="p">...)</span> </code></pre></td></tr></table>
+</div>
+</div>
+<p>指定值与列一一对应</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">insert</span> <span class="k">into</span> <span class="n">tbname</span> <span class="k">values</span><span class="p">(</span><span class="n">val1</span><span class="p">,</span><span class="n">val2</span><span class="p">,</span><span class="n">val3</span><span class="p">...)</span> <span class="err">全部列都插入值</span>
+<span class="k">insert</span> <span class="k">into</span> <span class="n">tbname</span> <span class="k">values</span><span class="p">(</span><span class="n">val1</span><span class="p">,</span><span class="n">val2</span><span class="p">,</span><span class="n">val3</span><span class="p">...),(</span><span class="n">val1</span><span class="p">,</span><span class="n">val2</span><span class="p">,</span><span class="n">val3</span><span class="p">...),(</span><span class="n">val1</span><span class="p">,</span><span class="n">val2</span><span class="p">,</span><span class="n">val3</span><span class="p">...)</span> </code></pre></td></tr></table>
+</div>
+</div>
+<p>删除数据</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">delete</span> <span class="k">from</span> <span class="n">tbname</span> <span class="k">where</span> <span class="err">列名</span><span class="o">=</span><span class="err">列值</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>修改数据</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">update</span> <span class="n">tbname</span> <span class="k">set</span> <span class="err">列名</span><span class="mi">1</span><span class="o">=</span><span class="err">新列值</span><span class="mi">1</span><span class="p">,</span><span class="err">列名</span><span class="mi">2</span><span class="o">=</span><span class="err">新列值</span><span class="mi">2</span> <span class="k">where</span> <span class="err">条件</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>查询数据</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="err">列</span><span class="mi">1</span><span class="p">,</span><span class="err">列</span><span class="mi">2</span><span class="p">,</span><span class="err">列</span><span class="mi">3</span> <span class="k">from</span> <span class="n">tbname</span><span class="p">;</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>数据类型</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="err">整型</span> <span class="n">tinyint</span> <span class="p">(</span><span class="mi">0</span><span class="o">-</span><span class="mi">255</span><span class="o">/-</span><span class="mi">128</span><span class="o">-</span><span class="mi">127</span><span class="p">)</span> <span class="nb">smallint</span> <span class="p">(</span><span class="mi">0</span><span class="o">-</span><span class="mi">65536</span><span class="o">/-</span><span class="mi">32768</span><span class="o">-</span><span class="mi">32767</span><span class="p">)</span> <span class="n">mediumint</span> <span class="p">()</span> <span class="nb">int</span> <span class="nb">bigint</span> <span class="err">共</span><span class="mi">5</span><span class="err">种类型</span>
+         <span class="n">unsigned</span> <span class="err">无符号</span><span class="p">(</span><span class="err">不能为负</span><span class="p">)</span> <span class="n">zerofill</span> <span class="p">(</span><span class="mi">0</span> <span class="err">填充</span><span class="p">)</span> <span class="n">M</span> <span class="err">填充后的宽度</span>
+	
+	  <span class="err">举例</span><span class="p">:</span> <span class="n">tinyint</span> <span class="n">unsigned</span><span class="p">;</span> <span class="n">tinyint</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="n">zerofill</span><span class="p">;</span>
+
+<span class="err">数值型</span><span class="p">:</span>   <span class="err">浮点型</span><span class="p">:</span> <span class="nb">float</span> <span class="n">double</span> 
+
+          <span class="err">格式</span><span class="p">:</span> <span class="nb">float</span><span class="p">(</span><span class="n">M</span><span class="p">,</span><span class="n">D</span><span class="p">)</span> <span class="n">D</span> <span class="err">表示小数位数</span> <span class="n">unsinged</span> <span class="n">zerofill</span><span class="p">;</span>
+
+<span class="err">字符型</span><span class="p">:</span>   <span class="nb">char</span><span class="p">(</span><span class="n">M</span><span class="p">)</span> <span class="err">定长</span> <span class="nb">varchar</span><span class="p">(</span><span class="n">M</span><span class="p">)</span> <span class="err">变长</span> <span class="nb">text</span> 
+	  
+	  <span class="err">列</span>		<span class="err">实存字符</span>	<span class="err">实占空间</span>
+	  
+	  <span class="nb">char</span><span class="p">(</span><span class="n">M</span><span class="p">)</span>	<span class="mi">0</span><span class="o">&lt;=</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">M</span>		<span class="n">M</span>
+
+	  <span class="nb">varchar</span><span class="p">(</span><span class="n">M</span><span class="p">)</span>	<span class="mi">0</span><span class="o">&lt;=</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">M</span>		<span class="n">i</span><span class="o">+</span><span class="mi">1</span>
+
+		<span class="k">year</span>		<span class="n">YYYY</span> <span class="err">范围</span><span class="p">:</span> <span class="mi">1901</span><span class="o">~</span><span class="mi">2155</span><span class="p">.</span> <span class="err">可输入值</span><span class="mi">2</span><span class="err">位和</span><span class="mi">4</span><span class="err">位</span><span class="p">(</span><span class="err">如</span><span class="mi">98</span><span class="p">,</span><span class="mi">2012</span><span class="p">)</span>
+		
+		<span class="nb">date</span>		<span class="n">YYYY</span><span class="o">-</span><span class="n">MM</span><span class="o">-</span><span class="n">DD</span> <span class="err">如</span><span class="p">:</span> <span class="mi">2010</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">04</span>
+
+<span class="err">日期时间类型</span><span class="p">:</span>	<span class="n">time</span>		<span class="n">HH</span><span class="p">:</span><span class="n">MM</span><span class="p">:</span><span class="n">SS</span> <span class="err">如</span><span class="p">:</span> <span class="mi">19</span><span class="p">:</span><span class="mi">26</span><span class="p">:</span><span class="mi">32</span>
+		
+		<span class="n">datetime</span>	<span class="n">YYYY</span><span class="o">-</span><span class="n">MM</span><span class="o">-</span><span class="n">DD</span> <span class="n">HH</span><span class="p">:</span><span class="n">MM</span><span class="p">:</span><span class="n">SS</span> <span class="err">如</span><span class="p">:</span> <span class="mi">2010</span><span class="o">-</span><span class="mi">03</span><span class="o">-</span><span class="mi">14</span> <span class="mi">19</span><span class="p">:</span><span class="mi">26</span><span class="p">:</span><span class="mi">32</span>
+
+		<span class="k">timestamp</span>	<span class="n">YYYY</span><span class="o">-</span><span class="n">MM</span><span class="o">-</span><span class="n">DD</span> <span class="n">HH</span><span class="p">:</span><span class="n">MM</span><span class="p">:</span><span class="n">SS</span> <span class="err">特性</span><span class="p">:</span><span class="err">不用赋值</span><span class="p">,</span><span class="err">该列会为自己赋当前的具体时间</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>查询详解: (1) 条件查询  where   a. select 列1,列2,列3.. from tbname where 列x=列x值;</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">            b. 比较运算符 select 列1,列2,列3.. from tbname where 列x[=|!=|&lt;|&gt;|&lt;=|&gt;=]列x值;
+
+            c. like,not like (&#39;%&#39;匹配任意多个字符,&#39;_&#39;匹配任意单个字符)
+
+            d. in,not in,between and
+
+            e. is null,is not null
+
+  (2) 分组    group by  配合5个聚合函数使用 max(最大),min(最小),sum(求和),avg(求平均),count(统计)
+
+  (3) 筛选    having
+
+  (4) 排序    order by
+
+  (5) 限制    limit</pre></td></tr></table>
+</div>
+</div>
+<p>连接查询:</p>
+
+<p>左连接: 例句 select 列1,列2,列3&hellip; from tbnameA left join tbnameB on tbnameA.列1 = tbnameB.列2;</p>
+
+<p>右连接: 例句 select 列1,列2,列3&hellip; from tbnameB right join tbnameA on tbnameA.列1 = tbnameB.列2;</p>
+
+<p>左右连接都是以在左边的表的数据结构为准，沿着左表查询。</p>
+
+<p>内连接是以两张表都有的共同部分数据为准，也就是左右连接的数据之交集。</p>
+
+<p>子查询:</p>
+
+<p>where 型子查询:内层sql的返回值在where后作为条件表达式的一部分</p>
+
+<p>例句: select * from tableA where colA = (select colB from tableB where &hellip;);</p>
+
+<p>from 型子查询:内层sql查询结果,作为一张表,供外层的sql语句再次查询</p>
+
+<p>例句:select * from (select * from &hellip;) as tableName where &hellip;</p>
+
+<p>字符集</p>
+
+<p>客服端sql编码 character_set_client</p>
+
+<p>服务器转化后的sql编码 character_set_connection</p>
+
+<p>服务器返回给客户端的结果集编码 character_set_results</p>
+
+<p>快速把以上3个变量设为相同值: set names 字符集</p>
+
+<p>存储引擎 engine:Myisam/Innodb</p>
+
+<ol>
+<li><p>Myisam  速度快 不支持事务 回滚</p></li>
+
+<li><p>Innodb  速度慢 支持事务 回滚</p></li>
+</ol>
+
+<p>事务执行顺序:</p>
+
+<p>a. 开启事务 start transaction</p>
+
+<p>b. 运行sql</p>
+
+<p>c. 提交,同时生效\回滚 commit\rollback</p>
+
+<p>触发器: trigger</p>
+
+<p>监视地点: 表</p>
+
+<p>监视行为: 增 删 改</p>
+
+<p>触发时间:a fter\before</p>
+
+<p>触发事件: 增 删 改</p>
+
+<p>创建触发器语法:</p>
+
+<p>create trigger tgName</p>
+
+<p>after/before insert/delete/update</p>
+
+<p>on tableName</p>
+
+<p>for each row</p>
+
+<p>sql 触发语句</p>
+
+<p>删除触发器: drop trigger tgName;</p>
+
+<p>综合练习题:</p>
+
+<ol>
+<li>连接数据库 (以本地机为例)</li>
+</ol>
+
+<p>答: mysql -hlocalhost -uroot -proot</p>
+
+<ol>
+<li>建立一个gbk编码的数据库</li>
+</ol>
+
+<p>答: create database test charset utf8;</p>
+
+<ol>
+<li>建立商品表和栏目表</li>
+</ol>
+
+<p>答: #商品表
+create table goods(
+goods_id int primary key auto_increment,
+goods_name varchar(20) not null default &ldquo;,
+cat_id int not null default 0,
+brand_id int not null default 0,
+goods_sn char(12) not null default &ldquo;,
+shop_price float(6,2) not null default 0.00,
+goods_desc text
+)engine MyISAM charset utf8;</p>
+
+<h1 id="栏目表">栏目表</h1>
+
+<p>create table category(
+cat_id int primary key auto_increment,
+cate_name varchar(20) not null default &ldquo;,
+parent_id int not null default 0
+)engine myisam charset utf8;</p>
+
+<ol>
+<li>删除 goods 表中的 goods_desc 字段及货号字段,并增加 click_count 字段</li>
+</ol>
+
+<p>答: alter table goods drop goods_desc;</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">alter table goods drop brand_id;
+
+alter table goods add click_count int not null default 0;</pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>在 goods_name 列上加唯一性索引</li>
+</ol>
+
+<p>答: alter table goods add unique index goods_name(goods_name);</p>
+
+<ol>
+<li>在 shop_price 列上加普通索引</li>
+</ol>
+
+<p>答: alter table goods add index shop_price(shop_price);</p>
+
+<ol>
+<li>在 click_count 上增加普通索引，然后再删除</li>
+</ol>
+
+<p>答: alter table goods add index click_count(click_count);</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">alter table goods drop index click_count;</pre></td></tr></table>
+</div>
+</div>
+<p>基础查询练习一(where条件查询)</p>
+
+<ol>
+<li>查询主键为32的商品</li>
+</ol>
+
+<p>答: select goods_id,goods_name,shop_price from goods where goods_id=32;</p>
+
+<ol>
+<li>查询不属于第三个栏目的所有商品</li>
+</ol>
+
+<p>答: select goods_id,goods_name,shop_price from goods where cat_id!=3;</p>
+
+<ol>
+<li>查询本店价格高于3000的商品</li>
+</ol>
+
+<p>答: select goods_name,goods_id,shop_price from goods where shop_price&gt;3000;</p>
+
+<ol>
+<li>查询本店商品价格低于或等于100元的商品</li>
+</ol>
+
+<p>答: select goods_id,goods_name,shop_price from goods where shop_price &lt;=100;</p>
+
+<ol>
+<li>取出第4个栏目或第11个栏目的商品(不允许用 or )</li>
+</ol>
+
+<p>答: select goods_id,goods_name,shop_price from goods where cat_id in (4,11);</p>
+
+<ol>
+<li>取出本店价格大于100小于500的商品(不允许用 and )</li>
+</ol>
+
+<p>答: select goods_id,goods_name,shop_price from goods where shop_price between 100 and 500;</p>
+
+<ol>
+<li>取出名字以”诺基亚“开头的商品</li>
+</ol>
+
+<p>答: select goods_id,goods_name,shop_price from goods where goods_name like &lsquo;诺基亚%&rsquo;;</p>
+
+<ol>
+<li>取出名字为”诺基亚Nxxx“的商品</li>
+</ol>
+
+<p>答: select goods_id,goods_name,shop_price from goods where goods_name like &lsquo;诺基亚N___&lsquo;;</p>
+
+<ol>
+<li>取出不在第3个栏目和不在第11个栏目的商品</li>
+</ol>
+
+<p>答: select goods_id,goods_name,shop_price from goods where cat_id!=3 and cat_id!=11;</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">select goods_id,goods_name,shop_price from goods where cat_id not in (3,11);</pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>取出名字不以”诺基亚“开头的商品</li>
+</ol>
+
+<p>答: select goods_id,goods_name,shop_price from goods where goods_name not like &lsquo;诺基亚%&rsquo;;</p>
+
+<ol>
+<li>取出价格大于100且小于300，或者大于4000且小于5000的商品</li>
+</ol>
+
+<p>答：select goods_id,goods_name,shop_price from goods where shop_price&gt;100 and shop_price<300 or shop_price>4000 and shop_price&lt;5000;</p>
+
+<ol>
+<li>取出第3个栏目下面价格在1000到3000之间，并且点击量大于5，以”诺基亚“开头的系列商品</li>
+</ol>
+
+<p>答: select goods_id,goods_name,shop_price from goods where cat_id=3 and shop_price&gt;1000 and shop_price<3000 and click_count>5 and goods_name like &lsquo;诺基亚%&rsquo;;
+    select goods_id,goods_name,shop_price from goods where cat_id=3 and shop_price between 1000 and 3000 and click_count&gt;5 and goods_name like &lsquo;诺基亚%&rsquo;;</p>
+
+<ol>
+<li>取出第3个栏目下面价格小于1000或价格大于3000，并且点击量大于5的系列商品</li>
+</ol>
+
+<p>答: select goods_id,goods_name,shop_price from goods where cat_id=3 and (shop_price<1000 or shop_price>3000) and click_count&gt;5;</p>
+
+<ol>
+<li>取出第1个栏目下面的商品(注意 1号栏目下面没有商品，但其子栏目2,3,4,5有商品)</li>
+</ol>
+
+<p>答: select goods_id,goods_name,shop_price from goods where cat_id in (2,3,4,5);</p>
+
+<p>基础查询练习二(group by 分组查询和聚合函数的使用)</p>
+
+<ol>
+<li>查出最贵的商品</li>
+</ol>
+
+<p>答: select goods_id,goods_name,shop_price from goods group by shop_price desc limit 1;</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">select max(shop_price) from goods;</pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>查出最大(最新)的商品的编号</li>
+</ol>
+
+<p>答: select max(goods_id) from goods;</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">select goods_id from goods group by goods_id desc limit 1;</pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>查出最便宜商品的价格</li>
+</ol>
+
+<p>答: select min(shop_price) from goods;</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">select goods_id,goods_name,shop_price from goods group by shop_price asc limit 1;</pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>取出最小(最旧)的商品编号</li>
+</ol>
+
+<p>答: select min(goods_id) fomr goods;</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">select goods_id,goods_name,shop_price from goods group by goods_id asc limit 1;</pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>查出本店所有商品的库存量</li>
+</ol>
+
+<p>答: select sum(goods_num) from goods;</p>
+
+<ol>
+<li>查出本店所有商品的平均价格</li>
+</ol>
+
+<p>答: select avg(shop_price) from goods;</p>
+
+<ol>
+<li>查出本店共有多少种商品</li>
+</ol>
+
+<p>答: select count(*) from goods;</p>
+
+<p>基础查询练习三(having 与 group by 综合运用)</p>
+
+<ol>
+<li>查出本店商品价格比市场价格的差价</li>
+</ol>
+
+<p>答: select goods_id,goods_name,market_price-shop_price as g from goods;</p>
+
+<ol>
+<li>查出每个商品所积压的货款</li>
+</ol>
+
+<p>答: select goods_id,goods_name,shop_price*goods_num as g from goods;</p>
+
+<ol>
+<li>查询本店积压的总货款</li>
+</ol>
+
+<p>答: select sum(shop_price*goods_num) from goods;</p>
+
+<ol>
+<li>查询出每个栏目下积压的总货款</li>
+</ol>
+
+<p>答: select cat_id,sum(shop_price*goods_num) as g from goods group by cat_id;</p>
+
+<ol>
+<li>查询比市场价省200元以上的商品及该商品所省的钱 (分别用 where 和 having 实现)</li>
+</ol>
+
+<p>答: select goods_id,goods_name market_price-shop_price as g from goods having g&gt;200;</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">select goods_id,goods_name market_price-shop_price from goods where market_price-shop_price&gt;200;</pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>查询积压货款超过2W的栏目，以及该栏目积压的货款</li>
+</ol>
+
+<p>答: select cat_id,sum(shop_price*goods_num) as g from goods group by cat_id having g&gt;20000;</p>
+
+<p>基础查询练习四(order by 与 limit 查询)</p>
+
+<ol>
+<li>按价格由高到低排序</li>
+</ol>
+
+<p>答: select goods_id,goods_name,shop_price from goods order by shop_price desc;</p>
+
+<ol>
+<li>按发布时间由早到晚排序</li>
+</ol>
+
+<p>答: select goods_id,goods_name,shop_price,pub_time from goods order by pub_time asc;</p>
+
+<ol>
+<li>按栏目由低到高排序，栏目内部按价格由高到低排序</li>
+</ol>
+
+<p>答: select goods_id,goods_name,cat_id,shop_price from goods order by cat_id asc,shop_price desc;</p>
+
+<ol>
+<li>取出价格最高的前三名商品</li>
+</ol>
+
+<p>答: select goods_id,goods_name,shop_price from goods order by shop_price desc limit 3;</p>
+
+<ol>
+<li>取出点击量前3到前5名的商品</li>
+</ol>
+
+<p>答: select goods_id,goods_name,shop_price from goods order by click_count desc limit 2,3;</p>
+
+<p>基础查询练习五(连接查询)</p>
+
+<ol>
+<li>取出所有商品的商品名，栏目名，价格</li>
+</ol>
+
+<p>答: select goods_name,cat_name,shop_price from goods left join category on goods.cat_id=category.cat_id;</p>
+
+<ol>
+<li>取出第4个栏目下的商品的商品名，栏目名，价格</li>
+</ol>
+
+<p>答: select goods_name,cat_name,shop_price from goods left join category on goods.cat_id=category.cat_id where cat_id=4;</p>
+
+<ol>
+<li>取出第4个栏目下的商品的商品名，栏目名，品牌名</li>
+</ol>
+
+<p>答: select goods_name,cat_name,brand_name from goods left join category on goods.cat_id=category.cat_id left join brand on goods.brand_id=brand.brand_id where cat_id=4;</p>
+
+<p>基础查询练习六(UNION 查询)</p>
+
+<ol>
+<li>把 goods 表和 category 表里各取出2列,并集成一个表</li>
+</ol>
+
+<p>答: select goods_name,goods_id from goods limit 4 union select cat_id,cat_name from category limit 4;</p>
+
+<p>基础查询练习七(子查询)</p>
+
+<ol>
+<li>查询出最新一行商品</li>
+</ol>
+
+<p>答: select goods_id,goods_name,shop_price from goods where goods_id=(select max(goods_id) from goods);</p>
+
+<ol>
+<li>查询出编号为19的商品的栏目名称(用左连接和子查询分别实现)</li>
+</ol>
+
+<p>答: select cat_name from category where cat_id=(select cat_id where from goods goods_id=19);</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">select cat_name from goods left join category on goods.cat_id=category.cat_id where goods_id=19;</pre></td></tr></table>
+</div>
+</div>
+<ol>
+<li>用 where 型子查询把 goods 表中的每个栏目下最新的商品取出来</li>
+</ol>
+
+<p>答: select goods_id,goods_name from goods where goods_id in (select max(goods_id) from goods group by cat_id);</p>
+
+<ol>
+<li>用 from 型子查询把 goods 表中的每个栏目下面最新的商品取出来</li>
+</ol>
+
+<p>答: select * from ()</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">wuxingzhong</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-10-11
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags//"></a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/post/lang/sql/sql%E6%93%8D%E4%BD%9C/">
+            <span class="next-text nav-default">Sql操作</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="gitalk-container"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var gitalk = new Gitalk({
+        id: '2019-10-11 19:08:37 \x2b0800 \x2b0800',
+        title: 'sql操作',
+        clientID: '3f8b4d8df7c9924dd7ef',
+        clientSecret: 'a769028997d4dec3bc9e64372eee463dfbd4cbba',
+        repo: 'gitalk-bytectl',
+        owner: 'wuxingzhong',
+        admin: ['wuxingzhong'],
+        body: decodeURI(location.href)
+      });
+      gitalk.render('gitalk-container');
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:330332812@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.github.com/wuxingzhong" class="iconfont icon-github" title="github"></a>
+  <a href="https://onenote.bytectl.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/bytectl/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">wuxingzhong</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+<link href="/mermaid/mermaid.css?1573178670" rel="stylesheet" />
+<script src="/mermaid/mermaid.js?1573178670"></script>
+<script>
+  mermaid.initialize({ startOnLoad: true });
+</script>
+
+
+</body>
+</html>

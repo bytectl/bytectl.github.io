@@ -6,10 +6,46 @@
     <description>Recent content in Tags on onenote</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Oct 2019 19:05:28 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 11 Oct 2019 19:08:37 +0800</lastBuildDate>
     
 	<atom:link href="https://onenote.bytectl.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>mysql</title>
+      <link>https://onenote.bytectl.com/tags/mysql/</link>
+      <pubDate>Fri, 11 Oct 2019 19:08:32 +0800</pubDate>
+      
+      <guid>https://onenote.bytectl.com/tags/mysql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>测试</title>
+      <link>https://onenote.bytectl.com/tags/%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Fri, 11 Oct 2019 19:08:32 +0800</pubDate>
+      
+      <guid>https://onenote.bytectl.com/tags/%E6%B5%8B%E8%AF%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://onenote.bytectl.com/tags/python/</link>
+      <pubDate>Fri, 11 Oct 2019 19:07:03 +0800</pubDate>
+      
+      <guid>https://onenote.bytectl.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>npm</title>
+      <link>https://onenote.bytectl.com/tags/npm/</link>
+      <pubDate>Fri, 11 Oct 2019 19:06:09 +0800</pubDate>
+      
+      <guid>https://onenote.bytectl.com/tags/npm/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>go</title>

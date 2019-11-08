@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>npm on onenote</title>
+    <link>https://onenote.bytectl.com/tags/npm/</link>
+    <description>Recent content in npm on onenote</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 11 Oct 2019 19:06:09 +0800</lastBuildDate>
+    
+	<atom:link href="https://onenote.bytectl.com/tags/npm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Npm</title>
+      <link>https://onenote.bytectl.com/post/lang/nodejs/npm/</link>
+      <pubDate>Fri, 11 Oct 2019 19:06:09 +0800</pubDate>
+      
+      <guid>https://onenote.bytectl.com/post/lang/nodejs/npm/</guid>
+      <description>创建package.json 1 npm init 下载包(并保存到package.json依赖中) 1 npm install xxx --save</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -10,7 +10,91 @@
   
   <url>
     <loc>https://onenote.bytectl.com/categories/</loc>
-    <lastmod>2019-11-08T09:38:08+08:00</lastmod>
+    <lastmod>2019-11-08T10:03:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://onenote.bytectl.com/</loc>
+    <lastmod>2019-11-08T10:03:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://onenote.bytectl.com/post/</loc>
+    <lastmod>2019-11-08T10:03:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://onenote.bytectl.com/post/lang/sql/%E4%BB%B7%E5%80%BCsql/</loc>
+    <lastmod>2019-10-11T19:08:37+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://onenote.bytectl.com/tags/</loc>
+    <lastmod>2019-11-08T10:03:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://onenote.bytectl.com/post/lang/sql/sql%E6%93%8D%E4%BD%9C/</loc>
+    <lastmod>2019-10-11T19:08:35+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://onenote.bytectl.com/tags/mysql/</loc>
+    <lastmod>2019-10-11T19:08:32+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://onenote.bytectl.com/post/lang/sql/mysql%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2019-10-11T19:08:32+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://onenote.bytectl.com/tags/%E6%B5%8B%E8%AF%95/</loc>
+    <lastmod>2019-10-11T19:08:32+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://onenote.bytectl.com/tags/python/</loc>
+    <lastmod>2019-11-08T10:03:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://onenote.bytectl.com/post/lang/python/python/</loc>
+    <lastmod>2019-11-08T10:03:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://onenote.bytectl.com/post/lang/nodejs/npm/</loc>
+    <lastmod>2019-11-08T10:03:29+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://onenote.bytectl.com/tags/npm/</loc>
+    <lastmod>2019-11-08T10:03:29+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -23,21 +107,7 @@
   </url>
   
   <url>
-    <loc>https://onenote.bytectl.com/</loc>
-    <lastmod>2019-11-08T09:38:08+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://onenote.bytectl.com/post/</loc>
-    <lastmod>2019-11-08T09:38:08+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://onenote.bytectl.com/tags/</loc>
+    <loc>https://onenote.bytectl.com/categories/go/</loc>
     <lastmod>2019-11-08T09:38:08+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -45,13 +115,6 @@
   
   <url>
     <loc>https://onenote.bytectl.com/tags/go/</loc>
-    <lastmod>2019-11-08T09:38:08+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://onenote.bytectl.com/categories/go/</loc>
     <lastmod>2019-11-08T09:38:08+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -226,14 +289,14 @@
   </url>
   
   <url>
-    <loc>https://onenote.bytectl.com/categories/java/</loc>
+    <loc>https://onenote.bytectl.com/tags/java/</loc>
     <lastmod>2019-10-11T19:24:26+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://onenote.bytectl.com/tags/java/</loc>
+    <loc>https://onenote.bytectl.com/categories/java/</loc>
     <lastmod>2019-10-11T19:24:26+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
