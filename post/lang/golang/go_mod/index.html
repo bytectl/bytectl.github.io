@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Go mod - onenote</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="wuxingzhong" /><meta name="description" content="go-mod 设置包下载代理 1 2 3 # Enable the go modules feature export GO111MODULE=on export GOPROXY=https://goproxy.io 初始化 法1: main包名 注释&amp;ndash;&amp;gt;模块名 1 2 3 4 5 6 7 8 9 10 11 12 // &amp;#34;github.com/example&amp;#34; 为模块名 package main //" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
+
+
+<link rel="canonical" href="https://onenote.bytectl.com/post/lang/golang/go_mod/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.c2a46f00.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Go mod" />
+<meta property="og:description" content="go-mod 设置包下载代理 1 2 3 # Enable the go modules feature export GO111MODULE=on export GOPROXY=https://goproxy.io 初始化 法1: main包名 注释&ndash;&gt;模块名 1 2 3 4 5 6 7 8 9 10 11 12 // &#34;github.com/example&#34; 为模块名 package main //" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://onenote.bytectl.com/post/lang/golang/go_mod/" />
+<meta property="article:published_time" content="2019-10-11T19:03:33+08:00" />
+<meta property="article:modified_time" content="2019-11-08T09:38:08+08:00" />
+<meta itemprop="name" content="Go mod">
+<meta itemprop="description" content="go-mod 设置包下载代理 1 2 3 # Enable the go modules feature export GO111MODULE=on export GOPROXY=https://goproxy.io 初始化 法1: main包名 注释&ndash;&gt;模块名 1 2 3 4 5 6 7 8 9 10 11 12 // &#34;github.com/example&#34; 为模块名 package main //">
+
+
+<meta itemprop="datePublished" content="2019-10-11T19:03:33&#43;08:00" />
+<meta itemprop="dateModified" content="2019-11-08T09:38:08&#43;08:00" />
+<meta itemprop="wordCount" content="916">
+
+
+
+<meta itemprop="keywords" content="go," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Go mod"/>
+<meta name="twitter:description" content="go-mod 设置包下载代理 1 2 3 # Enable the go modules feature export GO111MODULE=on export GOPROXY=https://goproxy.io 初始化 法1: main包名 注释&ndash;&gt;模块名 1 2 3 4 5 6 7 8 9 10 11 12 // &#34;github.com/example&#34; 为模块名 package main //"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Bytectl</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a><a href="/onenote-book/">
+        <li class="mobile-menu-item">OneNote</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Bytectl</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/onenote-book/">OneNote</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Go mod</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-10-11 </span>
+        <div class="post-category">
+            <a href="/categories/go/"> go </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#go-mod">go-mod</a>
+<ul>
+<li><a href="#设置包下载代理">设置包下载代理</a></li>
+<li><a href="#初始化">初始化</a></li>
+<li><a href="#命令管理">命令管理</a></li>
+<li><a href="#虚拟版本号">虚拟版本号</a></li>
+<li><a href="#go111module">GO111MODULE</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<h1 id="go-mod">go-mod</h1>
+
+<h2 id="设置包下载代理">设置包下载代理</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Enable the go modules feature</span>
+<span class="nb">export</span> <span class="nv">GO111MODULE</span><span class="o">=</span>on
+<span class="nb">export</span> <span class="nv">GOPROXY</span><span class="o">=</span>https://goproxy.io</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="初始化">初始化</h2>
+
+<p>法1: main包名 注释&ndash;&gt;模块名</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-go" data-lang="go"><span class="c1">// &#34;github.com/example&#34; 为模块名
+</span><span class="c1"></span><span class="kn">package</span> <span class="nx">main</span> <span class="c1">// import &#34;github.com/example&#34;
+</span><span class="c1"></span>
+<span class="kn">import</span> <span class="p">(</span>
+	<span class="s">&#34;fmt&#34;</span>
+<span class="p">)</span>
+
+<span class="kd">func</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nx">fmt</span><span class="p">.</span><span class="nf">Println</span><span class="p">(</span><span class="s">&#34;Hello, world!&#34;</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="o">//</span> <span class="k">go</span> <span class="nx">mod</span> <span class="nx">init</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>法二: 初始化指定</p>
+
+<p>如果你工程中之前已经存在一些依赖包管理工具, 如godep，glide或者dep. 那么go mod init同样也会根据依赖包管理配置文件来推断。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">go mod init github.com/example</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="命令管理">命令管理</h2>
+
+<p>添加缺失的模块以及移除不需要的模块, 生成go.sum</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">go mod tidy</code></pre></td></tr></table>
+</div>
+</div>
+<p>依赖包放到主模块所在的vendor目录中，并且测试所有主模块的包</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">go mod vendor</code></pre></td></tr></table>
+</div>
+</div>
+<p>检查当前模块的依赖是否已经存储在本地下载的源代码缓存中，以及检查自从下载下来是否有修改</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">go mod verify</code></pre></td></tr></table>
+</div>
+</div>
+<h2 id="虚拟版本号">虚拟版本号</h2>
+
+<p>go.mod文件和go命令通常使用语义版本作为描述模块版本的标准形式，这样可以比较不同版本的先后顺序。例如模块的版本是v1.2.3，那么通过重新对版本号进行标签处理，得到该版本的虚拟版本。形式如：v0.0.0-yyyymmddhhmmss-abcdefabcdef。其中时间是提交时的UTC时间，最后的后缀是提交的哈希值前缀。时间部分确保两个虚拟版本号可以进行比较，以确定两者顺序。</p>
+
+<p>下面有三种形式的虚拟版本号：</p>
+
+<p>vX.0.0-yyyymmddhhmmss-abcdefabcdef，这种情况适合用在在目标版本提交之前 ，没有更早的的版本。（这种形式本来是唯一的形式，所以一些老的go.mod文件使用这种形式）</p>
+
+<p>vX.Y.Z-pre.0.yyyymmddhhmmss-abcdefabcdef，这种情况被用在当目标版本提交之前的最新版本提交是vX.Y.Z-pre。</p>
+
+<p>vX.Y.(Z+1)-0.yyyymmddhhmmss-abcdefabcdef，同理，这种情况是当目标版本提交之前的最新版本是vX.Y.Z。</p>
+
+<p>虚拟版本的生成不需要你去手动操作，go命令会将接收的commit哈希值自动转化为虚拟版本号。</p>
+
+<h2 id="go111module">GO111MODULE</h2>
+
+<ol>
+<li><p>GOPATH模式</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 不使用module,相反的,在vendor和GOPATH目录中查找依赖包.</span> 
+<span class="nb">export</span> <span class="nv">GO111MODULE</span><span class="o">=</span>off</code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>modules模式</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 使用module,将依赖包放在GOPATH/pkg/mod目录下</span>
+<span class="nb">export</span> <span class="nv">GO111MODULE</span><span class="o">=</span>off</code></pre></td></tr></table>
+</div>
+</div></li>
+
+<li><p>auto模式</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># 根据当前目录(是否在GOPATH下)情况使用模式</span>
+<span class="nb">export</span> <span class="nv">GO111MODULE</span><span class="o">=</span>on</code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">wuxingzhong</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2019-11-08
+        <a href="/commit/727b6055b83dc4c1a5652ba07112d29f1e34b3b5" title="add">(727b605)</a>
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/go/">go</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/lang/golang/vscode&#43;go/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Vscode&#43;go</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/lang/golang/grpc/">
+            <span class="next-text nav-default">Grpc环境</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="gitalk-container"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var gitalk = new Gitalk({
+        id: '2019-10-11 19:03:33 \x2b0800 \x2b0800',
+        title: 'Go mod',
+        clientID: '3f8b4d8df7c9924dd7ef',
+        clientSecret: 'a769028997d4dec3bc9e64372eee463dfbd4cbba',
+        repo: 'gitalk-bytectl',
+        owner: 'wuxingzhong',
+        admin: ['wuxingzhong'],
+        body: decodeURI(location.href)
+      });
+      gitalk.render('gitalk-container');
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:330332812@qq.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://www.github.com/wuxingzhong" class="iconfont icon-github" title="github"></a>
+  <a href="https://onenote.bytectl.com/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/bytectl/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">wuxingzhong</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.26188efa.min.js"></script>
+
+
+
+
+
+
+
+
+<link href="/mermaid/mermaid.css?1573177149" rel="stylesheet" />
+<script src="/mermaid/mermaid.js?1573177149"></script>
+<script>
+  mermaid.initialize({ startOnLoad: true });
+</script>
+
+
+</body>
+</html>
